@@ -37,8 +37,8 @@ export default function Hero() {
           alt="LuxSur Hotel Boutique Fachada y Rooftop Nocturno"
           className="w-full h-full object-cover object-center scale-105 animate-pulse-slow"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A0621]/95 via-[#2A0B33]/85 to-[#1A0621]/80 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A0621]/40 via-[#2A0B33]/85 to-[#1A0621]/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent opacity-30" />
       </div>
 
       {/* FLOATING DECORATIVE ELEMENTS */}
