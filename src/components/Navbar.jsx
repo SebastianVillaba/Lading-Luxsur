@@ -32,12 +32,12 @@ export default function Navbar({ onOpenBookingModal }) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-[#2A0B33]/95 backdrop-blur-md shadow-xl py-3 border-b border-[#D4AF37]/30' 
+        ? 'bg-[#2A0B33]/95 backdrop-blur-md shadow-xl py-3 border-b border-[#5d205c]/40' 
         : 'bg-gradient-to-b from-[#2A0B33]/90 via-[#2A0B33]/60 to-transparent py-5'
     }`}>
       {/* BANNER PROMOCIONAL SI ESTÁ ACTIVO */}
       {settings.isBannerActive && settings.announcementBanner && (
-        <div className="bg-[#D4AF37] text-slate-950 text-xs font-bold py-1.5 px-4 text-center tracking-wide -mt-5 mb-3 shadow-md">
+        <div className="bg-[#5d205c] text-white text-xs font-bold py-1.5 px-4 text-center tracking-wide -mt-5 mb-3 shadow-md border-b border-purple-400/40">
           {settings.announcementBanner}
         </div>
       )}
@@ -47,7 +47,7 @@ export default function Navbar({ onOpenBookingModal }) {
           
           {/* LOGO E INSIGNIA CON MONOGRAMA LS Y CORONA */}
           <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] via-[#C5A059] to-[#997A23] p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#5d205c] via-[#7a2b79] to-[#3D1347] p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <div className="w-full h-full bg-[#3D1347] rounded-full flex flex-col items-center justify-center relative overflow-hidden">
                 <img 
                   src="/images/LOGO PNG LUXSUR BLANCO.png" 
@@ -59,17 +59,17 @@ export default function Navbar({ onOpenBookingModal }) {
             
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#D4AF37] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-purple-200 transition-colors">
                   {settings.hotelName?.split(' ')[0] || 'LuxSur'}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold border border-[#D4AF37]/40 px-1.5 py-0.5 rounded">
+                <span className="text-xs uppercase tracking-widest text-white font-semibold border border-purple-400/50 bg-[#5d205c]/30 px-1.5 py-0.5 rounded">
                   Boutique
                 </span>
               </div>
-              <div className="flex items-center gap-1 text-amber-300/90 text-[10px] tracking-wider uppercase font-medium">
-                <div className="flex text-amber-400">
+              <div className="flex items-center gap-1 text-slate-200 text-[10px] tracking-wider uppercase font-medium">
+                <div className="flex text-purple-300">
                   {[...Array(settings.stars || 4)].map((_, i) => (
-                    <Star key={i} className="w-2.5 h-2.5 fill-amber-400" />
+                    <Star key={i} className="w-2.5 h-2.5 fill-purple-300" />
                   ))}
                 </div>
                 <span>{settings.stars || 4} Estrellas ****</span>
@@ -83,10 +83,10 @@ export default function Navbar({ onOpenBookingModal }) {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-200 hover:text-[#D4AF37] px-3 py-2 text-sm font-medium transition-colors relative group"
+                className="text-slate-200 hover:text-white px-3 py-2 text-sm font-medium transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#D4AF37] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#5d205c] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </a>
             ))}
           </nav>
@@ -95,9 +95,9 @@ export default function Navbar({ onOpenBookingModal }) {
           <div className="hidden sm:flex items-center gap-4">
             <a
               href={`tel:${(settings.phone || '').replace(/\s+/g, '')}`}
-              className="hidden xl:flex items-center gap-1.5 text-xs text-amber-200/80 hover:text-amber-200 transition-colors"
+              className="hidden xl:flex items-center gap-1.5 text-xs text-slate-200 hover:text-white transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <Phone className="w-3.5 h-3.5 text-purple-300" />
               <span>{settings.phone}</span>
             </a>
 
@@ -114,9 +114,9 @@ export default function Navbar({ onOpenBookingModal }) {
             <Link
               to="/admin"
               title="Panel de Control & CMS"
-              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-[#D4AF37] border border-[#D4AF37]/30 transition-all hover:scale-105"
+              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-purple-400/30 transition-all hover:scale-105"
             >
-              <ShieldCheck className="w-4 h-4" />
+              <ShieldCheck className="w-4 h-4 text-purple-300" />
             </Link>
           </div>
 
@@ -133,7 +133,7 @@ export default function Navbar({ onOpenBookingModal }) {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-slate-200 hover:text-[#D4AF37] p-2 rounded-lg focus:outline-none"
+              className="text-slate-200 hover:text-white p-2 rounded-lg focus:outline-none"
               aria-label="Menú principal"
             >
               {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -144,13 +144,13 @@ export default function Navbar({ onOpenBookingModal }) {
 
       {/* MOBILE MENU DRAWER */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#2A0B33] border-b border-[#D4AF37]/30 px-4 pt-4 pb-6 space-y-3 shadow-2xl animate-fadeIn">
+        <div className="lg:hidden bg-[#2A0B33] border-b border-[#5d205c]/40 px-4 pt-4 pb-6 space-y-3 shadow-2xl animate-fadeIn">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-slate-100 hover:text-[#D4AF37] py-2 text-base font-medium border-b border-purple-900/40"
+              className="block text-slate-100 hover:text-purple-200 py-2 text-base font-medium border-b border-purple-900/40"
             >
               {link.name}
             </a>
@@ -177,9 +177,9 @@ export default function Navbar({ onOpenBookingModal }) {
             <Link
               to="/admin"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center bg-white/5 hover:bg-white/10 text-[#D4AF37] border border-[#D4AF37]/30 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2"
+              className="w-full text-center bg-white/5 hover:bg-white/10 text-purple-200 border border-purple-400/30 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2"
             >
-              <ShieldCheck className="w-4 h-4" />
+              <ShieldCheck className="w-4 h-4 text-purple-300" />
               <span>Acceso al Panel de Control (CMS)</span>
             </Link>
           </div>

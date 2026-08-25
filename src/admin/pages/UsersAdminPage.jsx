@@ -247,8 +247,8 @@ export default function UsersAdminPage() {
     switch (role) {
       case 'admin':
         return (
-          <span className="inline-flex items-center gap-1 bg-[#3D1347]/10 text-[#3D1347] border border-[#D4AF37]/40 px-2.5 py-0.5 rounded-full text-xs font-bold">
-            <Shield className="w-3 h-3 text-[#D4AF37]" />
+          <span className="inline-flex items-center gap-1 bg-[#5d205c]/10 text-[#5d205c] border border-purple-300/40 px-2.5 py-0.5 rounded-full text-xs font-bold">
+            <Shield className="w-3 h-3 text-[#5d205c]" />
             Administrador
           </span>
         );
@@ -305,7 +305,7 @@ export default function UsersAdminPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2.5 mb-1">
-            <div className="p-2 bg-[#3D1347] text-[#D4AF37] rounded-xl">
+            <div className="p-2 bg-[#5d205c] text-white rounded-xl">
               <Users className="w-5 h-5" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
@@ -323,7 +323,7 @@ export default function UsersAdminPage() {
             onClick={() => setIsSelfPasswordModalOpen(true)}
             className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl font-semibold text-xs border border-slate-200 shadow-xs transition-all cursor-pointer"
           >
-            <Key className="w-4 h-4 text-[#D4AF37]" />
+            <Key className="w-4 h-4 text-[#5d205c]" />
             <span>Cambiar Mi Contraseña</span>
           </button>
 
@@ -331,9 +331,9 @@ export default function UsersAdminPage() {
           {isAdmin && (
             <button
               onClick={handleOpenCreateModal}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#3D1347] to-[#581C68] hover:from-[#2A0B33] hover:to-[#3D1347] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-purple-950/20 border border-[#D4AF37]/30 transition-all cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-purple-950/20 border border-purple-400/30 transition-all cursor-pointer"
             >
-              <UserPlus className="w-4 h-4 text-[#D4AF37]" />
+              <UserPlus className="w-4 h-4 text-white" />
               <span>Crear Nuevo Usuario</span>
             </button>
           )}
@@ -342,8 +342,8 @@ export default function UsersAdminPage() {
 
       {/* AVISO DE PERMISOS SI NO ES ADMIN */}
       {!isAdmin && (
-        <div className="p-4 bg-purple-50/70 border border-purple-200/80 rounded-2xl flex items-center gap-3 text-xs text-[#3D1347]">
-          <Info className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+        <div className="p-4 bg-purple-50/70 border border-purple-200/80 rounded-2xl flex items-center gap-3 text-xs text-[#5d205c]">
+          <Info className="w-4 h-4 text-[#5d205c] flex-shrink-0" />
           <span>
             <strong>Modo Consulta:</strong> Tu rol actual ({currentUser?.role || 'operador'}) te permite visualizar la lista. Solo los <strong>Administradores</strong> pueden registrar, editar o eliminar usuarios. Puedes cambiar tu propia clave con el botón superior.
           </span>
@@ -412,14 +412,14 @@ export default function UsersAdminPage() {
                     <tr key={u.id} className="hover:bg-slate-50/80 transition-colors">
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#3D1347] to-[#581C68] text-white flex items-center justify-center font-bold text-sm shadow-sm border border-[#D4AF37]/30">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5d205c] to-[#7a2b79] text-white flex items-center justify-center font-bold text-sm shadow-sm border border-purple-300/40">
                             {(u.name || u.username || 'U').charAt(0).toUpperCase()}
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
                               <span className="font-bold text-slate-900 text-sm">{u.username}</span>
                               {isCurrent && (
-                                <span className="bg-[#D4AF37]/20 text-[#3D1347] border border-[#D4AF37]/50 text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+                                <span className="bg-[#5d205c]/20 text-[#5d205c] border border-purple-300/50 text-[10px] font-extrabold px-1.5 py-0.5 rounded">
                                   TÚ
                                 </span>
                               )}
@@ -484,17 +484,17 @@ export default function UsersAdminPage() {
                             <button
                               onClick={() => handleOpenAdminResetModal(u)}
                               title={`Restablecer contraseña de ${u.username}`}
-                              className="p-2 text-slate-500 hover:text-[#3D1347] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
-                              <Key className="w-4 h-4 text-[#D4AF37]" />
+                              <Key className="w-4 h-4 text-[#5d205c]" />
                             </button>
                           ) : isCurrent ? (
                             <button
                               onClick={() => setIsSelfPasswordModalOpen(true)}
                               title="Cambiar mi contraseña"
-                              className="p-2 text-slate-500 hover:text-[#3D1347] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
-                              <Key className="w-4 h-4 text-[#D4AF37]" />
+                              <Key className="w-4 h-4 text-[#5d205c]" />
                             </button>
                           ) : null}
 
@@ -503,7 +503,7 @@ export default function UsersAdminPage() {
                             <button
                               onClick={() => handleOpenEditModal(u)}
                               title="Editar usuario"
-                              className="p-2 text-slate-500 hover:text-[#3D1347] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
                               <Edit2 className="w-4 h-4" />
                             </button>
@@ -547,14 +547,14 @@ export default function UsersAdminPage() {
             
             <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center">
-                  <UserPlus className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+                  <UserPlus className="w-5 h-5 text-purple-200" />
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-lg">
                     {selectedUser ? `Editar Usuario: ${selectedUser.username}` : 'Crear Nuevo Usuario'}
                   </h3>
-                  <span className="text-xs text-amber-200/80">
+                  <span className="text-xs text-purple-200/80">
                     {selectedUser ? 'Modifica los permisos o datos' : 'Completa los datos de acceso'}
                   </span>
                 </div>
@@ -588,7 +588,7 @@ export default function UsersAdminPage() {
                   onChange={(e) => setFormData({ ...formData, username: e.target.value.replace(/\s+/g, '') })}
                   placeholder="ej: recepcion_luxsur"
                   required
-                  className={`w-full px-4 py-2.5 rounded-xl border text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 ${
+                  className={`w-full px-4 py-2.5 rounded-xl border text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 ${
                     selectedUser ? 'bg-slate-100 text-slate-500 border-slate-200 cursor-not-allowed' : 'bg-white border-slate-300'
                   }`}
                 />
@@ -602,94 +602,74 @@ export default function UsersAdminPage() {
               {/* NOMBRE COMPLETO */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Nombre y Apellido *
+                  Nombre Completo / Cargo *
                 </label>
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="ej: Lic. Rodrigo Benítez"
+                  placeholder="ej: María González (Recepción Turno Mañana)"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
                 />
               </div>
+
+              {/* PASSWORD (SI ES CREACIÓN) */}
+              {!selectedUser && (
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    Contraseña Inicial *
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      value={formData.password}
+                      onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                      placeholder="Mínimo 6 caracteres"
+                      required
+                      className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
+                    >
+                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+              )}
 
               {/* ROL */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Rol / Permisos *
+                  Rol de Permisos *
                 </label>
                 <select
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
                 >
-                  <option value="admin">Administrador (Acceso total & Gestión de Usuarios)</option>
-                  <option value="recepcion">Recepción (Gestión de habitaciones y reservas)</option>
-                  <option value="editor">Editor de Contenido (Textos, fotos, experiencias)</option>
+                  <option value="admin">Administrador (Acceso total)</option>
+                  <option value="recepcion">Recepción (Acceso a reservas e info)</option>
+                  <option value="editor">Editor (Modificar contenidos y catálogo)</option>
                 </select>
               </div>
 
-              {/* CONTRASEÑA (SOLO AL CREAR) */}
-              {!selectedUser && (
-                <>
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
-                      Contraseña *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type={showPassword ? 'text' : 'password'}
-                        value={formData.password}
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                        placeholder="Mínimo 6 caracteres"
-                        required
-                        className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
-                      >
-                        {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                      </button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
-                      Confirmar Contraseña *
-                    </label>
-                    <input
-                      type="password"
-                      value={formData.confirmPassword}
-                      onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                      placeholder="Repite la contraseña"
-                      required
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
-                    />
-                  </div>
-
-                  <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800 flex items-start gap-2">
-                    <Lock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                    <span>
-                      La contraseña será encriptada de forma segura antes de guardarse en el sistema.
-                    </span>
-                  </div>
-                </>
-              )}
-
-              {/* ACTIVO */}
-              <div className="flex items-center gap-3 pt-2">
-                <input
-                  type="checkbox"
-                  id="isActiveUser"
-                  checked={formData.isActive}
-                  onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
-                  className="w-4 h-4 text-[#3D1347] rounded focus:ring-[#3D1347] cursor-pointer"
-                />
-                <label htmlFor="isActiveUser" className="text-xs font-bold text-slate-700 cursor-pointer">
-                  Usuario Activo (Habilitado para iniciar sesión)
+              {/* ESTADO */}
+              <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between">
+                <div>
+                  <span className="text-xs font-bold text-slate-800 block">Cuenta Habilitada</span>
+                  <span className="text-[11px] text-slate-400">Si está inactiva, el usuario no podrá iniciar sesión.</span>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formData.isActive}
+                    onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
+                    className="sr-only peer"
+                  />
+                  <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5d205c]"></div>
                 </label>
               </div>
 
@@ -705,7 +685,7 @@ export default function UsersAdminPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#3D1347] to-[#581C68] hover:from-[#2A0B33] hover:to-[#3D1347] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? 'Guardando...' : selectedUser ? 'Guardar Cambios' : 'Crear Usuario'}
                 </button>
@@ -723,14 +703,14 @@ export default function UsersAdminPage() {
             
             <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center">
-                  <Key className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+                  <Key className="w-5 h-5 text-purple-200" />
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-base">
                     Restablecer Contraseña
                   </h3>
-                  <span className="text-xs text-amber-200/80">
+                  <span className="text-xs text-purple-200/80">
                     Usuario: <strong className="text-white">{selectedUser.username}</strong>
                   </span>
                 </div>
@@ -762,7 +742,7 @@ export default function UsersAdminPage() {
                     onChange={(e) => setAdminResetFormData({ ...adminResetFormData, newPassword: e.target.value })}
                     placeholder="Mínimo 6 caracteres"
                     required
-                    className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                    className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
                   />
                   <button
                     type="button"
@@ -784,12 +764,12 @@ export default function UsersAdminPage() {
                   onChange={(e) => setAdminResetFormData({ ...adminResetFormData, confirmNewPassword: e.target.value })}
                   placeholder="Repite la nueva contraseña"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
                 />
               </div>
 
-              <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#3D1347] flex items-start gap-2">
-                <Lock className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+              <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5d205c] flex items-start gap-2">
+                <Lock className="w-4 h-4 text-[#5d205c] shrink-0 mt-0.5" />
                 <span>
                   Como administrador, puedes asignar una nueva contraseña directa. Será encriptada de forma segura antes de persistir.
                 </span>
@@ -806,7 +786,7 @@ export default function UsersAdminPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#3D1347] to-[#581C68] hover:from-[#2A0B33] hover:to-[#3D1347] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? 'Guardando...' : 'Asignar Contraseña'}
                 </button>

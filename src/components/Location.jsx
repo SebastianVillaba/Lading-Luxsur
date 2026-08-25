@@ -11,12 +11,12 @@ export default function Location() {
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#3D1347]/10 text-[#3D1347] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
-            <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 bg-[#5d205c]/10 text-[#5d205c] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
+            <MapPin className="w-3.5 h-3.5 text-[#5d205c]" />
             <span>Encarnación - Paraguay</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
-            Ubicación <span className="text-[#3D1347]">Estratégica</span>
+            Ubicación <span className="text-[#5d205c]">Estratégica</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             En el corazón céntrico de Encarnación, rodeado de alta gastronomía, comercios y a solo minutos del atractivo principal del Sur paraguayo.
@@ -27,12 +27,12 @@ export default function Location() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* INFO CARD (5 COLS) */}
-          <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-[#D4AF37]/30 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-purple-400/30 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#581C68]/30 rounded-full blur-2xl pointer-events-none" />
 
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#D4AF37]/20 border border-[#D4AF37]/40 px-3 py-1 rounded-full text-xs font-semibold text-amber-200 mb-6">
-                <Compass className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <div className="inline-flex items-center gap-2 bg-[#5d205c]/30 border border-purple-400/40 px-3 py-1 rounded-full text-xs font-semibold text-white mb-6">
+                <Compass className="w-3.5 h-3.5 text-purple-300" />
                 <span>Punto Turístico Clave</span>
               </div>
 
@@ -40,7 +40,7 @@ export default function Location() {
                 {settings.hotelName || 'LuxSur Hotel Boutique'}
               </h3>
 
-              <p className="text-xs text-amber-300/90 font-medium mb-4">
+              <p className="text-xs text-purple-200 font-medium mb-4">
                 {settings.address}
               </p>
 
@@ -63,7 +63,7 @@ export default function Location() {
                 </div>
 
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
                     <Building2 className="w-5 h-5" />
                   </div>
                   <div>
@@ -93,7 +93,7 @@ export default function Location() {
               href={settings.mapsUrl || "https://maps.google.com/?q=Encarnacion+Paraguay+LuxSur+Hotel"}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A059] hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm cursor-pointer border border-purple-400/40"
             >
               <Navigation className="w-4 h-4" />
               <span>Abrir Ubicación en Google Maps</span>

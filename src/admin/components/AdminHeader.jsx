@@ -40,11 +40,11 @@ export default function AdminHeader({ onMenuClick }) {
 
           {/* USER PROFILE BADGE */}
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-purple-50 border border-purple-100 text-xs text-slate-700">
-            <div className="w-6 h-6 rounded-full bg-[#3D1347] text-[#D4AF37] flex items-center justify-center font-bold text-xs">
+            <div className="w-6 h-6 rounded-full bg-[#5d205c] text-white flex items-center justify-center font-bold text-xs">
               <User className="w-3.5 h-3.5" />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-semibold text-[#3D1347] leading-tight">
+              <span className="font-semibold text-[#5d205c] leading-tight">
                 {user?.name || user?.username || 'Admin'}
               </span>
               <span className="text-[9px] uppercase font-bold text-slate-400">
@@ -57,9 +57,9 @@ export default function AdminHeader({ onMenuClick }) {
           <button
             onClick={() => setIsPasswordModalOpen(true)}
             title="Cambiar Mi Contraseña"
-            className="p-2 rounded-xl text-slate-500 hover:text-[#3D1347] hover:bg-purple-50 transition-colors cursor-pointer border border-transparent hover:border-purple-200 flex items-center gap-1 text-xs font-semibold"
+            className="p-2 rounded-xl text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 transition-colors cursor-pointer border border-transparent hover:border-purple-200 flex items-center gap-1 text-xs font-semibold"
           >
-            <Key className="w-4 h-4 text-[#D4AF37]" />
+            <Key className="w-4 h-4 text-[#5d205c]" />
             <span className="hidden md:inline">Clave</span>
           </button>
 

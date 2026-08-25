@@ -14,7 +14,7 @@ export default function LandingPage() {
   const [selectedRoom, setSelectedRoom] = useState(null);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-[#3D1347] selection:text-[#D4AF37]">
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-[#5d205c] selection:text-white">
       {/* HEADER / NAVBAR */}
       <Navbar />
 

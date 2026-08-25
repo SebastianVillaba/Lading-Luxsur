@@ -137,12 +137,12 @@ export default function RoomsAdminPage() {
             to="/admin/categories"
             className="inline-flex items-center gap-2 px-4 py-3 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm rounded-xl border border-slate-200 shadow-xs transition-all flex-shrink-0 cursor-pointer"
           >
-            <Layers className="w-4 h-4 text-[#D4AF37]" />
+            <Layers className="w-4 h-4 text-[#5d205c]" />
             <span>Gestionar Categorías ({allCategories.length})</span>
           </Link>
           <Link
             to="/admin/rooms/new"
-            className="inline-flex items-center gap-2 px-5 py-3 bg-[#3D1347] hover:bg-[#2A0B33] text-[#D4AF37] font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-[#D4AF37]/30 flex-shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-purple-400/40 flex-shrink-0 cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Crear Habitación</span>
@@ -170,7 +170,7 @@ export default function RoomsAdminPage() {
             placeholder="Buscar por nombre, cama o tipo..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
           />
         </div>
 
@@ -182,7 +182,7 @@ export default function RoomsAdminPage() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
                 selectedCategory === cat
-                  ? 'bg-[#3D1347] text-[#D4AF37]'
+                  ? 'bg-[#5d205c] text-white shadow-xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -232,7 +232,7 @@ export default function RoomsAdminPage() {
                   {/* BADGE COMERCIAL */}
                   {room.badge && (
                     <div className="absolute top-3 left-3 z-10">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#3D1347] text-amber-200 border border-[#D4AF37]/50 shadow-md">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#3D1347] text-white border border-purple-400/50 shadow-md">
                         {room.badge}
                       </span>
                     </div>
@@ -240,7 +240,7 @@ export default function RoomsAdminPage() {
 
                   {/* NOMBRE Y CATEGORÍA */}
                   <div className="absolute bottom-3 left-3 right-3 z-10 text-white">
-                    <span className="text-[10px] uppercase font-bold text-amber-300 tracking-wider block">
+                    <span className="text-[10px] uppercase font-bold text-purple-200 tracking-wider block">
                       {room.category}
                     </span>
                     <h3 className="text-xl font-serif font-bold text-white truncate">
@@ -253,15 +253,15 @@ export default function RoomsAdminPage() {
                 <div className="p-5">
                   <div className="grid grid-cols-3 gap-1.5 py-2 px-2 bg-slate-50 rounded-xl border border-slate-200/60 mb-4 text-center text-slate-700 text-xs font-medium">
                     <div className="flex flex-col items-center justify-center p-1">
-                      <Users className="w-3.5 h-3.5 text-[#3D1347] mb-0.5" />
+                      <Users className="w-3.5 h-3.5 text-[#5d205c] mb-0.5" />
                       <span className="truncate max-w-full">{room.guestsLabel}</span>
                     </div>
                     <div className="flex flex-col items-center justify-center p-1 border-x border-slate-200">
-                      <Maximize2 className="w-3.5 h-3.5 text-[#3D1347] mb-0.5" />
+                      <Maximize2 className="w-3.5 h-3.5 text-[#5d205c] mb-0.5" />
                       <span>{room.size}</span>
                     </div>
                     <div className="flex flex-col items-center justify-center p-1">
-                      <Bed className="w-3.5 h-3.5 text-[#3D1347] mb-0.5" />
+                      <Bed className="w-3.5 h-3.5 text-[#5d205c] mb-0.5" />
                       <span className="truncate max-w-[70px]" title={room.bed}>{room.bed}</span>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ export default function RoomsAdminPage() {
                   <Link
                     to={`/admin/rooms/edit/${room.id}`}
                     title="Editar habitación"
-                    className="px-3 py-1.5 bg-[#3D1347] hover:bg-[#2A0B33] text-[#D4AF37] rounded-xl text-xs font-bold transition-colors flex items-center gap-1 shadow-xs cursor-pointer"
+                    className="px-3.5 py-1.5 bg-[#5d205c] hover:bg-[#7a2b79] text-white rounded-xl text-xs font-bold transition-colors flex items-center gap-1 shadow-xs cursor-pointer"
                   >
                     <Edit className="w-3.5 h-3.5" />
                     <span>Editar</span>
@@ -343,7 +343,7 @@ export default function RoomsAdminPage() {
           </p>
           <Link
             to="/admin/rooms/new"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#3D1347] text-[#D4AF37] text-xs font-bold rounded-xl shadow cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5d205c] hover:bg-[#7a2b79] text-white text-xs font-bold rounded-xl shadow cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Crear Primera Habitación</span>

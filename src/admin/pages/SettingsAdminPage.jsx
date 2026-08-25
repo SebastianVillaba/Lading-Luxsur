@@ -88,7 +88,7 @@ export default function SettingsAdminPage() {
         <button
           onClick={handleSubmit}
           disabled={isSaving}
-          className="px-6 py-2.5 bg-[#3D1347] hover:bg-[#2A0B33] text-[#D4AF37] font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-[#D4AF37]/30 disabled:opacity-50 flex-shrink-0"
+          className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40 disabled:opacity-50 flex-shrink-0"
         >
           <Save className="w-4 h-4" />
           <span>{isSaving ? 'Guardando...' : 'Guardar Ajustes'}</span>
@@ -118,7 +118,7 @@ export default function SettingsAdminPage() {
         {/* SECCIÓN 1: IDENTIDAD INSTITUCIONAL */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
           <h3 className="text-base font-serif font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-2">
-            <Sliders className="w-4 h-4 text-[#D4AF37]" />
+            <Sliders className="w-4 h-4 text-[#5d205c]" />
             <span>Identidad & Textos Institucionales</span>
           </h3>
 
@@ -316,7 +316,7 @@ export default function SettingsAdminPage() {
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
             <h3 className="text-base font-serif font-bold text-slate-900 flex items-center gap-2">
-              <Megaphone className="w-4 h-4 text-amber-500" />
+              <Megaphone className="w-4 h-4 text-[#5d205c]" />
               <span>Banner de Anuncio Promocional (Opcional)</span>
             </h3>
             <label className="relative inline-flex items-center cursor-pointer">
@@ -326,7 +326,7 @@ export default function SettingsAdminPage() {
                 onChange={(e) => setFormData({ ...formData, isBannerActive: e.target.checked })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#3D1347]"></div>
+              <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5d205c]"></div>
             </label>
           </div>
 

@@ -82,7 +82,7 @@ export default function RoomDetailModal({ room, onClose }) {
                     key={idx}
                     onClick={() => setSelectedImageIdx(idx)}
                     className={`w-16 h-12 rounded-lg overflow-hidden border-2 flex-shrink-0 transition-all cursor-pointer ${
-                      selectedImageIdx === idx ? 'border-[#D4AF37] scale-105' : 'border-transparent opacity-60 hover:opacity-100'
+                      selectedImageIdx === idx ? 'border-[#5d205c] scale-105' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
                     <img src={img} alt={`Vista ${idx + 1}`} className="w-full h-full object-cover" />
@@ -97,11 +97,11 @@ export default function RoomDetailModal({ room, onClose }) {
             <div>
               {/* CATEGORY & STAR BADGE */}
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#3D1347]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#5d205c]">
                   {room.category}
                 </span>
-                <div className="flex items-center gap-1 text-xs text-amber-500 font-semibold">
-                  <Star className="w-3.5 h-3.5 fill-amber-400" />
+                <div className="flex items-center gap-1 text-xs text-[#5d205c] font-semibold">
+                  <Star className="w-3.5 h-3.5 fill-[#5d205c] text-[#5d205c]" />
                   <span>LuxSur 4 Estrellas</span>
                 </div>
               </div>
@@ -114,15 +114,15 @@ export default function RoomDetailModal({ room, onClose }) {
               {/* TECHNICAL SPECS */}
               <div className="grid grid-cols-3 gap-2 py-3 px-4 bg-slate-50 rounded-xl border border-slate-200 mb-6 text-xs font-medium text-slate-700">
                 <div className="flex items-center gap-1.5">
-                  <Users className="w-4 h-4 text-[#3D1347]" />
+                  <Users className="w-4 h-4 text-[#5d205c]" />
                   <span>{room.guestsLabel}</span>
                 </div>
                 <div className="flex items-center gap-1.5 border-x border-slate-200 px-2">
-                  <Maximize2 className="w-4 h-4 text-[#3D1347]" />
+                  <Maximize2 className="w-4 h-4 text-[#5d205c]" />
                   <span>{room.size}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Bed className="w-4 h-4 text-[#3D1347]" />
+                  <Bed className="w-4 h-4 text-[#5d205c]" />
                   <span className="truncate" title={room.bed}>{room.bed}</span>
                 </div>
               </div>

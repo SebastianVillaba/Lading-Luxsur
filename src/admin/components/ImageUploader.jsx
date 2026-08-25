@@ -114,7 +114,7 @@ export default function ImageUploader({
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
-            <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+            <Star className="w-4 h-4 text-[#5d205c] fill-[#5d205c]" />
             <span>Foto Principal / Portada</span>
           </label>
           <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export default function ImageUploader({
                 setUrlTarget('main');
                 setShowUrlModal(true);
               }}
-              className="text-xs text-slate-500 hover:text-[#3D1347] flex items-center gap-1 font-medium transition-colors cursor-pointer"
+              className="text-xs text-slate-500 hover:text-[#5d205c] flex items-center gap-1 font-medium transition-colors cursor-pointer"
             >
               <LinkIcon className="w-3.5 h-3.5" />
               <span>Usar URL</span>
@@ -174,8 +174,8 @@ export default function ImageUploader({
               onClick={() => singleInputRef.current?.click()}
               className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all flex flex-col items-center justify-center h-full min-h-[140px] ${
                 isUploading
-                  ? 'border-amber-400 bg-amber-50/50 pointer-events-none'
-                  : 'border-slate-300 hover:border-[#3D1347] hover:bg-slate-50'
+                  ? 'border-purple-400 bg-purple-50/50 pointer-events-none'
+                  : 'border-slate-300 hover:border-[#5d205c] hover:bg-slate-50'
               }`}
             >
               <UploadCloud className="w-8 h-8 text-slate-400 mb-2" />
@@ -209,7 +209,7 @@ export default function ImageUploader({
                 setUrlTarget('gallery');
                 setShowUrlModal(true);
               }}
-              className="text-xs text-slate-500 hover:text-[#3D1347] flex items-center gap-1 font-medium transition-colors cursor-pointer"
+              className="text-xs text-slate-500 hover:text-[#5d205c] flex items-center gap-1 font-medium transition-colors cursor-pointer"
             >
               <LinkIcon className="w-3.5 h-3.5" />
               <span>Pegar URL</span>
@@ -217,9 +217,9 @@ export default function ImageUploader({
             <button
               type="button"
               onClick={() => multiInputRef.current?.click()}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#3D1347] hover:bg-[#2A0B33] text-white text-xs font-bold rounded-xl shadow transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#5d205c] hover:bg-[#7a2b79] text-white text-xs font-bold rounded-xl shadow transition-colors cursor-pointer"
             >
-              <Plus className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <Plus className="w-3.5 h-3.5 text-white" />
               <span>Subir Fotos</span>
             </button>
           </div>
@@ -254,7 +254,7 @@ export default function ImageUploader({
                     type="button"
                     onClick={() => handleSetAsMain(imgUrl, idx)}
                     title="Definir como foto de portada"
-                    className="p-1.5 bg-amber-400 text-slate-950 rounded-lg hover:bg-amber-300 transition-colors cursor-pointer"
+                    className="p-1.5 bg-[#5d205c] text-white rounded-lg hover:bg-[#7a2b79] transition-colors cursor-pointer"
                   >
                     <Star className="w-3.5 h-3.5 fill-current" />
                   </button>
@@ -292,7 +292,7 @@ export default function ImageUploader({
               placeholder="https://images.unsplash.com/..."
               value={urlInput}
               onChange={(e) => setUrlInput(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347] mb-4"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] mb-4"
               autoFocus
             />
             <div className="flex justify-end gap-2">
@@ -306,7 +306,7 @@ export default function ImageUploader({
               <button
                 type="button"
                 onClick={handleAddUrl}
-                className="px-4 py-2 text-xs font-bold text-slate-950 bg-[#D4AF37] hover:bg-amber-400 rounded-xl transition-colors cursor-pointer"
+                className="px-4 py-2 text-xs font-bold text-white bg-[#5d205c] hover:bg-[#7a2b79] rounded-xl transition-colors cursor-pointer shadow-md"
               >
                 Agregar Imagen
               </button>

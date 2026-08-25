@@ -32,8 +32,8 @@ export default function RoomCard({ room, onSelectRoom }) {
                 room.badgeType === 'urgent'
                   ? 'bg-rose-600 text-white animate-pulse'
                   : room.badgeType === 'popular'
-                  ? 'bg-gradient-to-r from-amber-500 to-[#D4AF37] text-slate-950'
-                  : 'bg-[#3D1347] text-amber-200 border border-[#D4AF37]/40'
+                  ? 'bg-gradient-to-r from-[#5d205c] to-[#7a2b79] text-white border border-purple-300/40'
+                  : 'bg-[#3D1347] text-white border border-purple-400/40'
               }`}>
                 <AlertCircle className="w-3.5 h-3.5" />
                 {room.badge}
@@ -43,10 +43,10 @@ export default function RoomCard({ room, onSelectRoom }) {
 
           {/* ROOM TITLE OVERLAY */}
           <div className="absolute bottom-4 left-4 right-4 z-10 text-white">
-            <span className="text-xs uppercase tracking-widest text-amber-300 font-semibold mb-1 block">
+            <span className="text-xs uppercase tracking-widest text-purple-200 font-semibold mb-1 block">
               {room.category}
             </span>
-            <h3 className="text-2xl font-serif font-bold text-white tracking-tight group-hover:text-amber-200 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-white tracking-tight group-hover:text-purple-200 transition-colors">
               {room.name}
             </h3>
           </div>
@@ -58,15 +58,15 @@ export default function RoomCard({ room, onSelectRoom }) {
           {/* TECHNICAL SPECIFICATIONS GRID */}
           <div className="grid grid-cols-3 gap-2 py-3 px-3 bg-slate-50 rounded-xl border border-slate-200/60 mb-5 text-center text-slate-700 text-xs font-medium">
             <div className="flex flex-col items-center justify-center p-1">
-              <Users className="w-4 h-4 text-[#3D1347] mb-1" />
+              <Users className="w-4 h-4 text-[#5d205c] mb-1" />
               <span>{room.guestsLabel}</span>
             </div>
             <div className="flex flex-col items-center justify-center p-1 border-x border-slate-200">
-              <Maximize2 className="w-4 h-4 text-[#3D1347] mb-1" />
+              <Maximize2 className="w-4 h-4 text-[#5d205c] mb-1" />
               <span>{room.size}</span>
             </div>
             <div className="flex flex-col items-center justify-center p-1">
-              <Bed className="w-4 h-4 text-[#3D1347] mb-1" />
+              <Bed className="w-4 h-4 text-[#5d205c] mb-1" />
               <span className="truncate max-w-[90px]" title={room.bed}>{room.bed}</span>
             </div>
           </div>
@@ -80,8 +80,8 @@ export default function RoomCard({ room, onSelectRoom }) {
           <div className="space-y-2 mb-6">
             {featuresList.slice(0, 4).map((feature, idx) => (
               <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
-                <div className="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3 h-3 text-[#D4AF37]" />
+                <div className="w-4 h-4 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3 h-3 text-[#5d205c]" />
                 </div>
                 <span className="truncate">{feature}</span>
               </div>

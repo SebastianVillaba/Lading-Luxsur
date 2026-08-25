@@ -43,7 +43,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
           {/* LOGO & BRAND */}
           <div className="p-6 border-b border-purple-900/40">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#D4AF37] via-[#C5A059] to-[#997A23] p-0.5 shadow-lg flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#5d205c] via-[#7a2b79] to-[#3D1347] p-0.5 shadow-lg flex-shrink-0">
                 <div className="w-full h-full bg-[#3D1347] rounded-[10px] flex items-center justify-center overflow-hidden p-1">
                   <img
                     src="/images/LOGO PNG LUXSUR BLANCO.png"
@@ -56,7 +56,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
                 <h1 className="font-serif font-bold text-lg text-white leading-none">
                   LuxSur
                 </h1>
-                <span className="text-[10px] text-[#D4AF37] font-semibold tracking-widest uppercase block mt-1">
+                <span className="text-[10px] text-purple-300 font-semibold tracking-widest uppercase block mt-1">
                   Panel de Control
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-[#3D1347] text-[#D4AF37] shadow-lg shadow-purple-950/40 border border-[#D4AF37]/30'
+                        ? 'bg-[#5d205c] text-white shadow-lg shadow-purple-950/40 border border-purple-400/40'
                         : 'text-slate-300 hover:bg-white/5 hover:text-white'
                     }`
                   }
@@ -98,7 +98,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
             className="flex items-center justify-between w-full px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-semibold text-slate-200 transition-colors cursor-pointer border border-white/10"
           >
             <span className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <Sparkles className="w-3.5 h-3.5 text-purple-300" />
               <span>Ver Sitio Web en Vivo</span>
             </span>
             <ExternalLink className="w-3.5 h-3.5 text-slate-400" />

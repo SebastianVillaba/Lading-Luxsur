@@ -21,12 +21,12 @@ export default function RoomGrid({ onSelectRoom }) {
         
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-[#3D1347]/10 text-[#3D1347] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 bg-[#5d205c]/10 text-[#5d205c] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-[#5d205c]" />
             <span>LuxSur Accommodations</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
-            Habitaciones & Suites <span className="text-[#3D1347]">Boutique</span>
+            Habitaciones & Suites <span className="text-[#5d205c]">Boutique</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             Cada habitación ha sido proyectada para brindar una atmósfera de tranquilidad y distinción en Encarnación. Tarifas en Guaraníes (PYG).
@@ -42,7 +42,7 @@ export default function RoomGrid({ onSelectRoom }) {
                 onClick={() => setFilter(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   filter === cat
-                    ? 'bg-[#3D1347] text-[#D4AF37] shadow-lg shadow-purple-950/20 border border-[#D4AF37]/50'
+                    ? 'bg-[#5d205c] text-white shadow-lg shadow-purple-950/20 border border-purple-400/40'
                     : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200'
                 }`}
               >
@@ -66,9 +66,9 @@ export default function RoomGrid({ onSelectRoom }) {
         )}
 
         {/* BOTTOM GUARANTEE CALLOUT */}
-        <div className="mt-16 bg-gradient-to-r from-[#2A0B33] via-[#3D1347] to-[#2A0B33] rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-[#D4AF37]/30">
+        <div className="mt-16 bg-gradient-to-r from-[#2A0B33] via-[#3D1347] to-[#2A0B33] rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-purple-400/30">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] flex-shrink-0">
+            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-purple-300 flex-shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
@@ -84,7 +84,7 @@ export default function RoomGrid({ onSelectRoom }) {
             href={settings.cloudbedsUrl || "https://hotels.cloudbeds.com/es/reservation/ayuGKi/?currency=pyg"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-amber-400 text-slate-950 px-6 py-3 rounded-xl font-bold text-sm shadow-lg transition-all duration-300 flex-shrink-0"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg transition-all duration-300 flex-shrink-0 border border-purple-400/40"
           >
             <span>Ver Tarifas Oficiales en Cloudbeds</span>
           </a>

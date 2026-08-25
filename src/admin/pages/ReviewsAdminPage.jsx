@@ -97,7 +97,7 @@ export default function ReviewsAdminPage() {
 
         <button
           onClick={() => handleOpenModal()}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#3D1347] hover:bg-[#2A0B33] text-[#D4AF37] font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-[#D4AF37]/30 flex-shrink-0 cursor-pointer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-purple-400/40 flex-shrink-0 cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Agregar Reseña</span>
@@ -123,7 +123,7 @@ export default function ReviewsAdminPage() {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-1">
                   {[...Array(rev.rating || 5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star key={i} className="w-4 h-4 fill-[#5d205c] text-[#5d205c]" />
                   ))}
                 </div>
                 <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1">
@@ -143,7 +143,7 @@ export default function ReviewsAdminPage() {
               <div>
                 <h4 className="font-bold text-slate-900 text-xs sm:text-sm">{rev.name}</h4>
                 <span className="text-[11px] text-slate-400 flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[#3D1347]" />
+                  <MapPin className="w-3 h-3 text-[#5d205c]" />
                   {rev.origin}
                 </span>
               </div>
@@ -185,7 +185,7 @@ export default function ReviewsAdminPage() {
                   placeholder="Ej: Valeria G."
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
                 />
               </div>
 
@@ -199,7 +199,7 @@ export default function ReviewsAdminPage() {
                     placeholder="Buenos Aires, Argentina"
                     value={formData.origin}
                     onChange={(e) => setFormData({ ...formData, origin: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#3D1347]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
                   />
                 </div>
                 <div>
@@ -211,7 +211,7 @@ export default function ReviewsAdminPage() {
                     placeholder="Agosto 2026"
                     value={formData.stayDate}
                     onChange={(e) => setFormData({ ...formData, stayDate: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#3D1347]"
+                    className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
                   />
                 </div>
               </div>
@@ -223,7 +223,7 @@ export default function ReviewsAdminPage() {
                 <select
                   value={formData.rating}
                   onChange={(e) => setFormData({ ...formData, rating: Number(e.target.value) })}
-                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-[#5d205c]"
                 >
                   <option value={5}>★★★★★ (5 Estrellas - Excelente)</option>
                   <option value={4}>★★★★☆ (4 Estrellas - Muy Bueno)</option>
@@ -241,7 +241,7 @@ export default function ReviewsAdminPage() {
                   placeholder="Escribe la experiencia del huésped en LuxSur..."
                   value={formData.comment}
                   onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
                 />
               </div>
 
@@ -255,7 +255,7 @@ export default function ReviewsAdminPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 text-xs font-bold text-slate-950 bg-[#D4AF37] hover:bg-amber-400 rounded-xl shadow cursor-pointer"
+                  className="px-5 py-2 text-xs font-bold text-white bg-[#5d205c] hover:bg-[#7a2b79] rounded-xl shadow cursor-pointer"
                 >
                   Guardar Reseña
                 </button>

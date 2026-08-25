@@ -68,14 +68,14 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
         {/* MODAL HEADER */}
         <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center">
-              <Key className="w-5 h-5 text-[#D4AF37]" />
+            <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+              <Key className="w-5 h-5 text-purple-200" />
             </div>
             <div>
               <h3 className="font-serif font-bold text-base">
                 Cambiar Mi Contraseña
               </h3>
-              <span className="text-xs text-amber-200/80">
+              <span className="text-xs text-purple-200/80">
                 Usuario: <strong className="text-white">{username || 'Sesión Activa'}</strong>
               </span>
             </div>
@@ -117,7 +117,7 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 placeholder="Ingresa tu contraseña actual"
                 required
-                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
               />
               <button
                 type="button"
@@ -141,7 +141,7 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Mínimo 6 caracteres"
                 required
-                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
               />
               <button
                 type="button"
@@ -164,12 +164,12 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Repite la nueva contraseña"
               required
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 bg-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
             />
           </div>
 
-          <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#3D1347] flex items-start gap-2">
-            <Lock className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+          <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5d205c] flex items-start gap-2">
+            <Lock className="w-4 h-4 text-[#5d205c] shrink-0 mt-0.5" />
             <span>
               Tu nueva clave se protegerá con encriptación segura y se aplicará para futuros inicios de sesión.
             </span>

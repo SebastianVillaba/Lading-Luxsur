@@ -7,10 +7,10 @@ export default function Experiences() {
 
   const getIcon = (id) => {
     switch (id) {
-      case 'celebraciones': return <Gift className="w-5 h-5 text-[#D4AF37]" />;
-      case 'vacaciones': return <Compass className="w-5 h-5 text-[#D4AF37]" />;
-      case 'luna-de-miel': return <Heart className="w-5 h-5 text-[#D4AF37]" />;
-      default: return <Sparkles className="w-5 h-5 text-[#D4AF37]" />;
+      case 'celebraciones': return <Gift className="w-5 h-5 text-purple-300" />;
+      case 'vacaciones': return <Compass className="w-5 h-5 text-purple-300" />;
+      case 'luna-de-miel': return <Heart className="w-5 h-5 text-purple-300" />;
+      default: return <Sparkles className="w-5 h-5 text-purple-300" />;
     }
   };
 
@@ -18,18 +18,18 @@ export default function Experiences() {
     <section id="experiencias" className="py-24 bg-[#2A0B33] text-white relative overflow-hidden">
       {/* BACKGROUND ACCENTS */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#581C68]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#5d205c]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#D4AF37]/20 border border-[#D4AF37]/40 px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-amber-200 mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="inline-flex items-center gap-2 bg-[#5d205c]/30 border border-purple-400/40 px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-white mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-purple-300" />
             <span>LuxSur Moments</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-4">
-            Momentos Especiales & <span className="gold-gradient-text">Experiencias</span>
+            Momentos Especiales & <span className="purple-gradient-text">Experiencias</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
             Diseñamos recuerdos imborrables para cada etapa de tu vida. Desde escapadas románticas hasta grandes reuniones familiares en Encarnación.
@@ -41,7 +41,7 @@ export default function Experiences() {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="group relative bg-[#3D1347]/80 rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-xl hover:shadow-2xl hover:border-[#D4AF37] transition-all duration-500 flex flex-col justify-between"
+              className="group relative bg-[#3D1347]/80 rounded-2xl overflow-hidden border border-purple-400/30 shadow-xl hover:shadow-2xl hover:border-purple-300 transition-all duration-500 flex flex-col justify-between"
             >
               {/* IMAGE */}
               <div className="relative h-56 overflow-hidden bg-slate-950">
@@ -53,7 +53,7 @@ export default function Experiences() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2A0B33] via-transparent to-transparent opacity-80" />
 
                 {/* TAG BADGE */}
-                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-[#D4AF37]/40 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-200 flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-purple-400/40 px-3 py-1 rounded-full text-[11px] font-semibold text-white flex items-center gap-1.5">
                   {getIcon(exp.id)}
                   <span>{exp.tag}</span>
                 </div>
@@ -62,10 +62,10 @@ export default function Experiences() {
               {/* CONTENT */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold mb-1 block">
+                  <span className="text-xs uppercase tracking-widest text-purple-300 font-semibold mb-1 block">
                     {exp.subtitle}
                   </span>
-                  <h3 className="text-xl font-serif font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
+                  <h3 className="text-xl font-serif font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
                     {exp.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-6">
@@ -77,7 +77,7 @@ export default function Experiences() {
                   href={settings.cloudbedsUrl || "https://hotels.cloudbeds.com/es/reservation/ayuGKi/?currency=pyg"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-between text-xs font-bold text-[#D4AF37] group-hover:text-white py-2 px-3 rounded-xl bg-purple-950/60 border border-[#D4AF37]/30 group-hover:bg-[#D4AF37] group-hover:text-slate-950 transition-all duration-300"
+                  className="w-full inline-flex items-center justify-between text-xs font-bold text-white py-2.5 px-3 rounded-xl bg-[#5d205c]/80 hover:bg-[#5d205c] border border-purple-400/40 transition-all duration-300 shadow-md"
                 >
                   <span>Reservar Paquete</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

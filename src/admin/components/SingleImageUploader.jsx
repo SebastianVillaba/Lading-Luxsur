@@ -98,11 +98,11 @@ export default function SingleImageUploader({
             placeholder="https://images.unsplash.com/..."
             value={urlDraft}
             onChange={(e) => setUrlDraft(e.target.value)}
-            className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-[#3D1347] focus:outline-none"
+            className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-[#5d205c] focus:outline-none"
           />
           <button
             type="submit"
-            className="px-3 py-1.5 bg-[#3D1347] text-[#D4AF37] rounded-lg text-xs font-bold hover:bg-[#2A0B33] transition-colors cursor-pointer"
+            className="px-3 py-1.5 bg-[#5d205c] text-white rounded-lg text-xs font-bold hover:bg-[#7a2b79] transition-colors cursor-pointer"
           >
             Aplicar
           </button>
@@ -177,8 +177,8 @@ export default function SingleImageUploader({
           onClick={() => !isUploading && fileInputRef.current?.click()}
           className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[140px] ${
             isUploading
-              ? 'border-amber-400 bg-amber-50/50 pointer-events-none'
-              : 'border-slate-300 hover:border-[#3D1347] hover:bg-purple-50/20 bg-slate-50/50'
+              ? 'border-purple-400 bg-purple-50/50 pointer-events-none'
+              : 'border-slate-300 hover:border-[#5d205c] hover:bg-purple-50/20 bg-slate-50/50'
           }`}
         >
           {isUploading ? (
