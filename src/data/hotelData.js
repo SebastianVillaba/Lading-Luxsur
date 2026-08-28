@@ -4,7 +4,7 @@ export const HOTEL_INFO = {
   name: "LuxSur Hotel Boutique",
   stars: 4,
   starSymbol: "****",
-  tagline: "El lujo del Sur en el corazón de Encarnación, Paraguay.",
+  tagline: "El corazón del sur",
   address: "Encarnación, Itapúa - Paraguay",
   phone: "+595 986 495 500",
   whatsappRaw: "595986495500",
@@ -12,6 +12,24 @@ export const HOTEL_INFO = {
   cloudbedsUrl: "https://hotels.cloudbeds.com/es/reservation/ayuGKi/?currency=pyg",
   mapsUrl: "https://maps.google.com/?q=Encarnacion+Paraguay+LuxSur+Hotel",
   googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14167.337834524451!2d-55.8752216!3d-27.3371904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94579549f3c7b741%3A0x7d01869e5d429a3!2sEncarnaci%C3%B3n%2C%20Paraguay!5e0!3m2!1ses!2s!4v1700000000000!5m2!1ses!2s"
+};
+
+export const HISTORY_DATA = {
+  id: "history",
+  tag: "Nuestra Esencia & Trayectoria",
+  title: "Pasión por los Detalles y Hospitalidad Boutique",
+  subtitle: "Nuestra Historia",
+  paragraph1: "En Hotel Luxsur nacimos con la convicción de que la excelencia se encuentra en los detalles. Ubicados en el corazón de Encarnación y a minutos de la Playa San José, combinamos arquitectura moderna, confort de primer nivel y una cálida hospitalidad para que cada estadía sea inolvidable.",
+  paragraph2: "Desde nuestras habitaciones temáticas hasta nuestra icónica terraza con vista 360° a la ciudad y a Posadas, cada espacio está diseñado para ofrecer una experiencia única, ya sea para descansar o celebrar tus eventos más importantes.",
+  image: "/images/luxsur-afuera.jpg",
+  quote: "La excelencia se encuentra en los detalles",
+  stats: [
+    { label: "Años de Excelencia", value: "+10" },
+    { label: "Terraza Panorámica", value: "360°" },
+    { label: "Playa San José", value: "3 min" },
+    { label: "Calidad Boutique", value: "4 ★★★★" }
+  ],
+  isActive: true
 };
 
 export const ROOMS_DATA = [

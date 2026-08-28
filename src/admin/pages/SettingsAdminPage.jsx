@@ -166,7 +166,7 @@ export default function SettingsAdminPage() {
         {/* SECCIÓN 2: CANALES DE CONTACTO & WHATSAPP */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
           <h3 className="text-base font-serif font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-2">
-            <MessageCircle className="w-4 h-4 text-emerald-600" />
+            <MessageCircle className="w-4 h-4 text-[#25d366]" />
             <span>Canales de Contacto Directo & WhatsApp</span>
           </h3>
 
@@ -177,7 +177,7 @@ export default function SettingsAdminPage() {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                  <MessageCircle className="w-4 h-4 text-emerald-600" />
+                  <MessageCircle className="w-4 h-4 text-[#25d366]" />
                 </div>
                 <input
                   type="text"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import History from '../components/History';
 import RoomGrid from '../components/RoomGrid';
 import RoomDetailModal from '../components/RoomDetailModal';
 import Experiences from '../components/Experiences';
@@ -20,6 +21,9 @@ export default function LandingPage() {
 
       {/* HERO SECTION WITH SEARCH WIDGET */}
       <Hero />
+
+      {/* HOTEL HISTORY SECTION */}
+      <History />
 
       {/* ROOMS CATALOG SECTION */}
       <RoomGrid onSelectRoom={(room) => setSelectedRoom(room)} />

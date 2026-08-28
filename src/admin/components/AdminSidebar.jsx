@@ -17,7 +17,7 @@ const NAV_ITEMS = [
   { path: '/admin/rooms', label: 'Habitaciones', icon: BedDouble },
   { path: '/admin/categories', label: 'Categorías', icon: Layers },
   { path: '/admin/settings', label: 'Configuración General', icon: Sliders },
-  { path: '/admin/content', label: 'Experiencias & Servicios', icon: Compass },
+  { path: '/admin/content', label: 'Historia & Contenidos', icon: Compass },
   { path: '/admin/reviews', label: 'Reseñas & Testimonios', icon: MessageSquareQuote },
   { path: '/admin/users', label: 'Gestión de Usuarios', icon: Users }
 ];

@@ -55,6 +55,9 @@ export default function Footer() {
                 <a href="#inicio" className="hover:text-purple-200 transition-colors">Inicio & Búsqueda</a>
               </li>
               <li>
+                <a href="#historia" className="hover:text-purple-200 transition-colors">Nuestra Historia</a>
+              </li>
+              <li>
                 <a href="#habitaciones" className="hover:text-purple-200 transition-colors">Habitaciones & Suites</a>
               </li>
               <li>

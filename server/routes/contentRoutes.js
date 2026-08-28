@@ -7,11 +7,17 @@ import {
   saveService,
   deleteService,
   getRooftopInfo,
-  updateRooftopInfo
+  updateRooftopInfo,
+  getHistory,
+  updateHistory
 } from '../controllers/contentController.js';
 import { verifyToken } from '../middleware/auth.js';
 
 const router = express.Router();
+
+// Rutas de Historia
+router.get('/history', getHistory);
+router.put('/history', verifyToken, updateHistory);
 
 // Rutas de Experiencias
 router.get('/experiences', getExperiences);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Calendar, Phone, Star, ShieldCheck } from 'lucide-react';
+import { Menu, X, Calendar, Phone, Star, ShieldCheck, MessageCircle } from 'lucide-react';
 import { useHotelData } from '../context/HotelDataContext';
 
 export default function Navbar({ onOpenBookingModal }) {
@@ -22,6 +22,7 @@ export default function Navbar({ onOpenBookingModal }) {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
+    { name: 'Historia', href: '#historia' },
     { name: 'Habitaciones', href: '#habitaciones' },
     { name: 'Experiencias', href: '#experiencias' },
     { name: 'Servicios', href: '#servicios' },
@@ -108,7 +109,7 @@ export default function Navbar({ onOpenBookingModal }) {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#059669] hover:from-[#059669] hover:to-[#047857] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-emerald-900/30 hover:shadow-emerald-600/40 hover:scale-105 transition-all duration-300 border border-emerald-400/30"
             >
               <Calendar className="w-4 h-4 text-emerald-100" />
-              <span>Reservar / Consultar</span>
+              <span>Reservar</span>
             </a>
 
             <Link
@@ -169,9 +170,9 @@ export default function Navbar({ onOpenBookingModal }) {
               href={`https://wa.me/${settings.whatsappRaw || '595986495500'}?text=${encodeURIComponent(settings.whatsappMessage || 'Hola')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2"
+              className="w-full text-center bg-[#25d366]/15 hover:bg-[#25d366]/25 text-[#25d366] border border-[#25d366]/40 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-colors"
             >
-              <Phone className="w-4 h-4 text-emerald-400" />
+              <MessageCircle className="w-4 h-4 text-[#25d366]" />
               <span>Atención por WhatsApp ({settings.phone})</span>
             </a>
             <Link

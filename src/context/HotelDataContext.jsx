@@ -6,7 +6,8 @@ import {
   EXPERIENCES_DATA as DEFAULT_EXPERIENCES_DATA,
   SERVICES_DATA as DEFAULT_SERVICES_DATA,
   ROOFTOP_RESTAURANT_INFO as DEFAULT_ROOFTOP_INFO,
-  REVIEWS_DATA as DEFAULT_REVIEWS_DATA
+  REVIEWS_DATA as DEFAULT_REVIEWS_DATA,
+  HISTORY_DATA as DEFAULT_HISTORY_DATA
 } from '../data/hotelData';
 
 const HotelDataContext = createContext();
@@ -23,6 +24,7 @@ export function HotelDataProvider({ children }) {
   const [rooms, setRooms] = useState(DEFAULT_ROOMS_DATA);
   const [categories, setCategories] = useState(DEFAULT_CATEGORIES);
   const [settings, setSettings] = useState(DEFAULT_HOTEL_INFO);
+  const [history, setHistory] = useState(DEFAULT_HISTORY_DATA);
   const [experiences, setExperiences] = useState(DEFAULT_EXPERIENCES_DATA);
   const [services, setServices] = useState(DEFAULT_SERVICES_DATA);
   const [rooftop, setRooftop] = useState(DEFAULT_ROOFTOP_INFO);
@@ -55,25 +57,31 @@ export function HotelDataProvider({ children }) {
         });
       }
 
-      // 3. Experiencias
+      // 3. Historia del Hotel
+      const histRes = await api.getHistory().catch(() => null);
+      if (histRes && histRes.success && histRes.history) {
+        setHistory(histRes.history);
+      }
+
+      // 4. Experiencias
       const expRes = await api.getExperiences().catch(() => null);
       if (expRes && expRes.success && Array.isArray(expRes.experiences)) {
         setExperiences(expRes.experiences);
       }
 
-      // 4. Servicios
+      // 5. Servicios
       const servRes = await api.getServices().catch(() => null);
       if (servRes && servRes.success && Array.isArray(servRes.services)) {
         setServices(servRes.services);
       }
 
-      // 5. Rooftop
+      // 6. Rooftop
       const roofRes = await api.getRooftop().catch(() => null);
       if (roofRes && roofRes.success && roofRes.rooftop) {
         setRooftop(roofRes.rooftop);
       }
 
-      // 6. Reseñas
+      // 7. Reseñas
       const revRes = await api.getReviews().catch(() => null);
       if (revRes && revRes.success && Array.isArray(revRes.reviews)) {
         setReviews(revRes.reviews);
@@ -104,12 +112,21 @@ export function HotelDataProvider({ children }) {
     }
   };
 
+  const refreshHistory = async () => {
+    const res = await api.getHistory().catch(() => null);
+    if (res && res.success && res.history) {
+      setHistory(res.history);
+    }
+  };
+
   const refreshContent = async () => {
-    const [exp, serv, roof] = await Promise.all([
+    const [hist, exp, serv, roof] = await Promise.all([
+      api.getHistory().catch(() => null),
       api.getExperiences().catch(() => null),
       api.getServices().catch(() => null),
       api.getRooftop().catch(() => null)
     ]);
+    if (hist?.success && hist.history) setHistory(hist.history);
     if (exp?.success) setExperiences(exp.experiences);
     if (serv?.success) setServices(serv.services);
     if (roof?.success) setRooftop(roof.rooftop);
@@ -135,6 +152,7 @@ export function HotelDataProvider({ children }) {
         categories: categories.filter(c => c.isActive !== false),
         allCategories: categories,
         settings,
+        history,
         experiences: experiences.filter(e => e.isActive !== false),
         allExperiences: experiences,
         services: services.filter(s => s.isActive !== false),
@@ -147,11 +165,13 @@ export function HotelDataProvider({ children }) {
         refreshRooms,
         refreshCategories,
         refreshSettings,
+        refreshHistory,
         refreshContent,
         refreshReviews,
         setRooms,
         setCategories,
-        setSettings
+        setSettings,
+        setHistory
       }}
     >
       {children}

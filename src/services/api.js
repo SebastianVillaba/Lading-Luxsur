@@ -79,7 +79,10 @@ export const api = {
   getSettings: () => apiRequest('/settings'),
   updateSettings: (settings) => apiRequest('/settings', { method: 'PUT', body: JSON.stringify(settings) }),
 
-  // Experiencias & Servicios & Rooftop
+  // Experiencias & Servicios & Rooftop & Historia
+  getHistory: () => apiRequest('/content/history'),
+  updateHistory: (history) => apiRequest('/content/history', { method: 'PUT', body: JSON.stringify(history) }),
+
   getExperiences: () => apiRequest('/content/experiences'),
   saveExperience: (exp) => apiRequest('/content/experiences', { method: 'POST', body: JSON.stringify(exp) }),
   deleteExperience: (id) => apiRequest(`/content/experiences/${id}`, { method: 'DELETE' }),

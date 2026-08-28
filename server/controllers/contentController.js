@@ -229,3 +229,82 @@ export async function updateRooftopInfo(req, res) {
     return res.status(500).json({ success: false, message: error.message });
   }
 }
+
+// HISTORIA DEL HOTEL
+export async function getHistory(req, res) {
+  try {
+    try {
+      const pool = await getConnection();
+      const result = await pool.request().query(`SELECT * FROM [dbo].[historia] WHERE id = 'history'`);
+      if (result.recordset.length > 0) {
+        const row = result.recordset[0];
+        let stats = [];
+        try {
+          stats = typeof row.stats === 'string' ? JSON.parse(row.stats) : row.stats;
+        } catch (e) { stats = []; }
+        return res.json({
+          success: true,
+          history: {
+            id: row.id,
+            tag: row.tag,
+            title: row.title,
+            subtitle: row.subtitle,
+            paragraph1: row.paragraph1,
+            paragraph2: row.paragraph2,
+            image: row.image,
+            quote: row.quote,
+            stats,
+            isActive: Boolean(row.isActive)
+          }
+        });
+      }
+    } catch (dbErr) {}
+    const data = getLocalData();
+    return res.json({ success: true, history: data.history });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error.message });
+  }
+}
+
+export async function updateHistory(req, res) {
+  const h = req.body;
+  const statsJson = JSON.stringify(h.stats || []);
+  try {
+    try {
+      const pool = await getConnection();
+      await pool.request()
+        .input('tag', sql.NVarChar(150), h.tag || '')
+        .input('title', sql.NVarChar(150), h.title || '')
+        .input('subtitle', sql.NVarChar(150), h.subtitle || '')
+        .input('paragraph1', sql.NVarChar(sql.MAX), h.paragraph1 || '')
+        .input('paragraph2', sql.NVarChar(sql.MAX), h.paragraph2 || '')
+        .input('image', sql.NVarChar(500), h.image || '')
+        .input('quote', sql.NVarChar(250), h.quote || '')
+        .input('stats', sql.NVarChar(sql.MAX), statsJson)
+        .input('isActive', sql.Bit, h.isActive !== false ? 1 : 0)
+        .query(`
+          IF EXISTS (SELECT 1 FROM [dbo].[historia] WHERE id = 'history')
+          BEGIN
+            UPDATE [dbo].[historia] SET
+              tag = @tag, title = @title, subtitle = @subtitle,
+              paragraph1 = @paragraph1, paragraph2 = @paragraph2,
+              image = @image, quote = @quote, stats = @stats,
+              isActive = @isActive, updatedAt = GETDATE()
+            WHERE id = 'history'
+          END
+          ELSE
+          BEGIN
+            INSERT INTO [dbo].[historia] (id, tag, title, subtitle, paragraph1, paragraph2, image, quote, stats, isActive)
+            VALUES ('history', @tag, @title, @subtitle, @paragraph1, @paragraph2, @image, @quote, @stats, @isActive)
+          END
+        `);
+    } catch (dbErr) {
+      const data = getLocalData();
+      data.history = { ...data.history, ...h };
+      saveLocalData(data);
+    }
+    return res.json({ success: true, message: 'Historia del hotel actualizada exitosamente', history: h });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: error.message });
+  }
+}

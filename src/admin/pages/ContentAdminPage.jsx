@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHotelData } from '../../context/HotelDataContext';
 import { api } from '../../services/api';
 import ConfirmModal from '../components/ConfirmModal';
@@ -20,7 +20,8 @@ import {
   Tv,
   Shield,
   Clock,
-  Sparkles
+  Sparkles,
+  BookOpen
 } from 'lucide-react';
 
 const LUCIDE_ICONS_LIST = [
@@ -36,9 +37,36 @@ const LUCIDE_ICONS_LIST = [
 ];
 
 export default function ContentAdminPage() {
-  const { allExperiences, allServices, rooftop, refreshContent } = useHotelData();
-  const [activeSection, setActiveSection] = useState('experiences'); // 'experiences' | 'services' | 'rooftop'
+  const { allExperiences, allServices, rooftop, history, refreshContent } = useHotelData();
+  const [activeSection, setActiveSection] = useState('history'); // 'history' | 'experiences' | 'services' | 'rooftop'
   const [feedback, setFeedback] = useState({ type: '', message: '' });
+
+  // Form Historia
+  const [historyForm, setHistoryForm] = useState({
+    tag: '',
+    title: '',
+    subtitle: '',
+    paragraph1: '',
+    paragraph2: '',
+    image: '',
+    quote: '',
+    isActive: true
+  });
+
+  useEffect(() => {
+    if (history) {
+      setHistoryForm({
+        tag: history.tag || 'Nuestra Historia & Esencia',
+        title: history.title || 'Pasión por los Detalles y Hospitalidad Boutique',
+        subtitle: history.subtitle || 'Nuestra Historia',
+        paragraph1: history.paragraph1 || '',
+        paragraph2: history.paragraph2 || '',
+        image: history.image || '/images/luxsur-afuera.jpg',
+        quote: history.quote || 'La excelencia se encuentra en los detalles',
+        isActive: history.isActive !== false
+      });
+    }
+  }, [history]);
 
   // Modal Experiencias
   const [expModal, setExpModal] = useState({ isOpen: false, data: null });
@@ -58,8 +86,27 @@ export default function ContentAdminPage() {
     highlights: []
   });
 
+  useEffect(() => {
+    if (rooftop) {
+      setRooftopForm(rooftop);
+    }
+  }, [rooftop]);
+
   // Delete Modal
   const [deleteModal, setDeleteModal] = useState({ isOpen: false, type: '', id: '', name: '' });
+
+  // Guardar Historia
+  const handleSaveHistory = async (e) => {
+    e.preventDefault();
+    try {
+      await api.updateHistory(historyForm);
+      await refreshContent();
+      setFeedback({ type: 'success', message: 'Historia del hotel actualizada exitosamente.' });
+      setTimeout(() => setFeedback({ type: '', message: '' }), 3000);
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
 
   // Guardar Experiencia
   const handleSaveExp = async (e) => {
@@ -125,10 +172,10 @@ export default function ContentAdminPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <h1 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
-            Experiencias, Servicios & Restaurante
+            Historia, Experiencias, Servicios & Restaurante
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Gestiona las secciones de actividades turísticas de Encarnación, comodidades del hotel y el Restaurante Rooftop.
+            Gestiona la sección de historia del hotel, actividades turísticas de Encarnación, comodidades y el Restaurante Rooftop.
           </p>
         </div>
       </div>
@@ -144,7 +191,19 @@ export default function ContentAdminPage() {
       )}
 
       {/* SECTION TABS */}
-      <div className="flex gap-2 border-b border-slate-200 pb-2">
+      <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-2">
+        <button
+          onClick={() => setActiveSection('history')}
+          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
+            activeSection === 'history'
+              ? 'bg-[#5d205c] text-white shadow'
+              : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+          }`}
+        >
+          <BookOpen className="w-4 h-4" />
+          <span>Historia del Hotel</span>
+        </button>
+
         <button
           onClick={() => setActiveSection('experiences')}
           className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
@@ -181,6 +240,133 @@ export default function ContentAdminPage() {
           <span>Restaurant Panorámico</span>
         </button>
       </div>
+
+      {/* 0. SECCIÓN HISTORIA DEL HOTEL */}
+      {activeSection === 'history' && (
+        <form onSubmit={handleSaveHistory} className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5 animate-fadeIn max-w-3xl">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 className="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-[#5d205c]" />
+              <span>Historia & Esencia de LuxSur</span>
+            </h3>
+            <div className="flex items-center gap-3">
+              <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={historyForm.isActive}
+                  onChange={(e) => setHistoryForm({ ...historyForm, isActive: e.target.checked })}
+                  className="rounded border-slate-300 text-[#5d205c] focus:ring-[#5d205c]"
+                />
+                <span>Sección Visible</span>
+              </label>
+              <button
+                type="submit"
+                className="px-5 py-2 bg-[#5d205c] hover:bg-[#7a2b79] text-white font-bold text-xs rounded-xl shadow cursor-pointer transition-all"
+              >
+                Guardar Historia
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+                Etiqueta / Badge Superior
+              </label>
+              <input
+                type="text"
+                value={historyForm.tag}
+                onChange={(e) => setHistoryForm({ ...historyForm, tag: e.target.value })}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                placeholder="Nuestra Historia & Esencia"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+                Subtítulo (Fuente Allegro)
+              </label>
+              <input
+                type="text"
+                value={historyForm.subtitle}
+                onChange={(e) => setHistoryForm({ ...historyForm, subtitle: e.target.value })}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                placeholder="Nuestra Historia"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+              Título Principal
+            </label>
+            <input
+              type="text"
+              value={historyForm.title}
+              onChange={(e) => setHistoryForm({ ...historyForm, title: e.target.value })}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              placeholder="Pasión por los Detalles y Hospitalidad Boutique"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+              Párrafo 1 (Reseña de Origen & Ubicación)
+            </label>
+            <textarea
+              rows={3}
+              value={historyForm.paragraph1}
+              onChange={(e) => setHistoryForm({ ...historyForm, paragraph1: e.target.value })}
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] leading-relaxed"
+              placeholder="En Hotel Luxsur nacimos con la convicción..."
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+              Párrafo 2 (Espacios, Habitaciones y Terraza 360°)
+            </label>
+            <textarea
+              rows={3}
+              value={historyForm.paragraph2}
+              onChange={(e) => setHistoryForm({ ...historyForm, paragraph2: e.target.value })}
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] leading-relaxed"
+              placeholder="Desde nuestras habitaciones temáticas..."
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+              Cita o Frase Destacada
+            </label>
+            <input
+              type="text"
+              value={historyForm.quote}
+              onChange={(e) => setHistoryForm({ ...historyForm, quote: e.target.value })}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              placeholder="La excelencia se encuentra en los detalles"
+            />
+          </div>
+
+          <div>
+            <SingleImageUploader
+              value={historyForm.image || ''}
+              onChange={(url) => setHistoryForm({ ...historyForm, image: url })}
+              label="Foto Principal de la Historia / Fachada"
+              helperText="Sube una foto representativa de alta calidad (JPG, PNG, WebP)"
+              aspectRatio="aspect-4/3"
+            />
+          </div>
+
+          <div className="pt-2 flex justify-end">
+            <button
+              type="submit"
+              className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-sm rounded-xl shadow-md cursor-pointer transition-all"
+            >
+              Guardar Cambios de Historia
+            </button>
+          </div>
+        </form>
+      )}
 
       {/* 1. SECCIÓN EXPERIENCIAS */}
       {activeSection === 'experiences' && (

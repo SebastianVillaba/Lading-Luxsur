@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Allegro';
+  src: url('/fonts/Allegro.woff2') format('woff2'),
+       url('/fonts/Allegro.woff') format('woff'),
+       url('/fonts/Allegro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shelley Allegro';
+  src: url('/fonts/Allegro.woff2') format('woff2'),
+       url('/fonts/Allegro.woff') format('woff'),
+       url('/fonts/Allegro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-purple-imperial: #3D1347;
   --color-purple-deep: #2A0B33;
@@ -14,11 +34,17 @@
   --color-emerald-action: #10B981;
   --color-teal-action: #26A69A;
   --color-emerald-dark: #059669;
+  --color-whatsapp: #25d366;
   --color-snow-light: #F8FAFC;
   --color-anthracite: #1E293B;
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-allegro: 'Allegro', 'Shelley Allegro', 'Shelley Allegro BT', cursive, serif;
+}
+
+.font-allegro {
+  font-family: 'Allegro', 'Shelley Allegro', 'Shelley Allegro BT', cursive, serif;
 }
 
 @layer base {
@@ -82,3 +108,5 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #7a2b79;
 }
+
+

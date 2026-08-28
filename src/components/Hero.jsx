@@ -37,8 +37,6 @@ export default function Hero() {
           alt="LuxSur Hotel Boutique Fachada y Rooftop Nocturno"
           className="w-full h-full object-cover object-center scale-105 animate-pulse-slow"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A0621]/40 via-[#2A0B33]/85 to-[#1A0621]/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent opacity-30" />
       </div>
 
       {/* FLOATING DECORATIVE ELEMENTS */}
@@ -59,15 +57,18 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* HERO TITLE */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight max-w-5xl leading-tight mb-4 drop-shadow-lg">
-          {settings.hotelName || 'LuxSur Hotel Boutique'} 
-        </h1>
-
-        {/* SUBTITLE */}
-        <p className="text-lg sm:text-2xl text-slate-200 max-w-3xl font-light tracking-wide mb-8 leading-relaxed drop-shadow">
-          {settings.tagline || 'El lujo del Sur en el corazón de Encarnación, Paraguay.'}
-        </p>
+        {/* HERO TITLE & SUBTITLE */}
+        <div className="w-full max-w-4xl mx-auto mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-tight text-center drop-shadow-lg">
+            {settings.hotelName || 'LuxSur Hotel Boutique'} 
+          </h1>
+          <div className="flex justify-end pr-4 sm:pr-10 md:pr-16 -mt-2 sm:-mt-4">
+            {/* SUBTITLE */}
+            <p className="font-allegro text-3xl sm:text-5xl md:text-6xl text-purple-200 drop-shadow-lg tracking-normal font-normal">
+              {settings.tagline || 'El corazón del sur'}
+            </p>
+          </div>
+        </div>
 
         {/* HIGHLIGHT PILLS */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm text-slate-200">
@@ -95,7 +96,7 @@ export default function Hero() {
               </h2>
             </div>
             <span className="text-xs text-emerald-400 font-medium flex items-center gap-1">
-              Garantía Mejor Tarifa (PYG)
+              Garantía Mejor Tarifa
             </span>
           </div>
 
@@ -171,7 +172,7 @@ export default function Hero() {
             <div className="flex flex-col justify-end">
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#10B981] via-[#26A69A] to-[#059669] hover:from-[#059669] hover:to-[#047857] text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-950/40 hover:shadow-emerald-500/30 transition-all duration-300 flex items-center justify-center gap-2 group border border-emerald-400/40 cursor-pointer"
+                className="w-full bg-[#25d366]  text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group border border-emerald-400/40 cursor-pointer"
               >
                 <Search className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span>Consultar Disponibilidad</span>
