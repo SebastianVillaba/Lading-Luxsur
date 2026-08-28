@@ -62,7 +62,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-tight text-center drop-shadow-lg">
             {settings.hotelName || 'LuxSur Hotel Boutique'} 
           </h1>
-          <div className="flex justify-end pr-4 sm:pr-10 md:pr-16 -mt-2 sm:-mt-4">
+          <div className="flex justify-center pr-4 sm:pr-10 md:pr-16 -mt-2 sm:-mt-4">
             {/* SUBTITLE */}
             <p className="font-allegro text-3xl sm:text-5xl md:text-6xl text-purple-200 drop-shadow-lg tracking-normal font-normal">
               {settings.tagline || 'El corazón del sur'}
