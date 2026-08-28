@@ -11,7 +11,7 @@ export default function Reviews() {
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#5d205c]/30 border border-purple-400/40 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-white mb-3">
+          <div className="inline-flex items-center gap-2 bg-[#5e265e]/30 border border-purple-400/40 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-white mb-3">
             <Star className="w-3.5 h-3.5 fill-purple-300 text-purple-300" />
             <span>Opiniones de Nuestros Huéspedes</span>
           </div>
@@ -28,9 +28,9 @@ export default function Reviews() {
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-[#1A0621]/90 rounded-2xl p-6 border border-purple-400/30 shadow-xl flex flex-col justify-between relative"
+              className="bg-[#2e0e2e]/90 rounded-2xl p-6 border border-purple-400/30 shadow-xl flex flex-col justify-between relative"
             >
-              <Quote className="w-8 h-8 text-[#5d205c]/40 absolute top-4 right-4" />
+              <Quote className="w-8 h-8 text-[#5e265e]/40 absolute top-4 right-4" />
               
               <div>
                 <div className="flex text-purple-300 mb-3">

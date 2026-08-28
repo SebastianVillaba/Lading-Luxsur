@@ -40,13 +40,13 @@ export default function Hero() {
       </div>
 
       {/* FLOATING DECORATIVE ELEMENTS */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-[#5d205c]/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#581C68]/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-72 h-72 bg-[#5e265e]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[#722672]/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
         {/* CATEGORY BADGE */}
-        <div className="inline-flex items-center gap-2 bg-[#3D1347]/90 border border-purple-400/40 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg mb-6 animate-fadeIn">
+        <div className="inline-flex items-center gap-2 bg-[#4d1a4d]/90 border border-purple-400/40 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg mb-6 animate-fadeIn">
           <div className="flex text-purple-300">
             {[...Array(settings.stars || 4)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-purple-300" />
@@ -87,7 +87,7 @@ export default function Hero() {
         </div>
 
         {/* WIDGET FLOTANTE DE BÚSQUEDA / RESERVA RÁPIDA */}
-        <div className="w-full max-w-5xl bg-[#2A0B33]/90 backdrop-blur-xl border border-purple-500/40 rounded-2xl p-4 sm:p-6 shadow-2xl purple-border-glow">
+        <div className="w-full max-w-5xl bg-[#381238]/90 backdrop-blur-xl border border-purple-500/40 rounded-2xl p-4 sm:p-6 shadow-2xl purple-border-glow">
           <div className="text-left mb-4 flex items-center justify-between border-b border-purple-800/60 pb-3">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-purple-300" />
@@ -112,7 +112,7 @@ export default function Hero() {
                 value={checkin}
                 min={formatDateForInput(today)}
                 onChange={(e) => setCheckin(e.target.value)}
-                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 required
               />
             </div>
@@ -127,7 +127,7 @@ export default function Hero() {
                 value={checkout}
                 min={checkin}
                 onChange={(e) => setCheckout(e.target.value)}
-                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 required
               />
             </div>
@@ -140,7 +140,7 @@ export default function Hero() {
               <select
                 value={guests}
                 onChange={(e) => setGuests(e.target.value)}
-                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
               >
                 <option value="1">1 Persona</option>
                 <option value="2">2 Personas (Pareja)</option>
@@ -157,7 +157,7 @@ export default function Hero() {
               <select
                 value={selectedRoom}
                 onChange={(e) => setSelectedRoom(e.target.value)}
-                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full bg-white text-slate-900 text-sm font-medium px-3 py-2.5 rounded-xl border border-purple-200 focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
               >
                 <option value="">Todas las Categorías</option>
                 {activeRooms.map((room) => (

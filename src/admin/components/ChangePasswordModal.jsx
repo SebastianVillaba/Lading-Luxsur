@@ -66,9 +66,9 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
       <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-md overflow-hidden animate-scaleUp">
         
         {/* MODAL HEADER */}
-        <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
+        <div className="p-6 bg-gradient-to-r from-[#4d1a4d] to-[#381238] text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-[#5e265e]/40 border border-purple-400/40 flex items-center justify-center">
               <Key className="w-5 h-5 text-purple-200" />
             </div>
             <div>
@@ -117,7 +117,7 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 placeholder="Ingresa tu contraseña actual"
                 required
-                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
               />
               <button
                 type="button"
@@ -141,7 +141,7 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Mínimo 6 caracteres"
                 required
-                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
               />
               <button
                 type="button"
@@ -164,12 +164,12 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Repite la nueva contraseña"
               required
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
             />
           </div>
 
-          <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5d205c] flex items-start gap-2">
-            <Lock className="w-4 h-4 text-[#5d205c] shrink-0 mt-0.5" />
+          <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5e265e] flex items-start gap-2">
+            <Lock className="w-4 h-4 text-[#5e265e] shrink-0 mt-0.5" />
             <span>
               Tu nueva clave se protegerá con encriptación segura y se aplicará para futuros inicios de sesión.
             </span>
@@ -187,7 +187,7 @@ export default function ChangePasswordModal({ isOpen, onClose, username }) {
             <button
               type="submit"
               disabled={isSubmitting || success}
-              className="px-6 py-2.5 bg-gradient-to-r from-[#3D1347] to-[#581C68] hover:from-[#2A0B33] hover:to-[#3D1347] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
+              className="px-6 py-2.5 bg-gradient-to-r from-[#4d1a4d] to-[#722672] hover:from-[#381238] hover:to-[#4d1a4d] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
             >
               {isSubmitting ? 'Guardando...' : 'Actualizar Contraseña'}
             </button>

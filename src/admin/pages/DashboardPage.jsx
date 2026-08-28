@@ -24,9 +24,9 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       {/* HEADER BIENVENIDA */}
-      <div className="bg-gradient-to-r from-[#2A0B33] via-[#3D1347] to-[#1E0624] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-purple-400/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-gradient-to-r from-[#381238] via-[#4d1a4d] to-[#2e0e2e] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-purple-400/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5d205c]/40 text-purple-200 border border-purple-400/40 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5e265e]/40 text-purple-200 border border-purple-400/40 text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Panel de Administración Boutique</span>
           </div>
@@ -41,7 +41,7 @@ export default function DashboardPage() {
         <div className="flex flex-wrap items-center gap-3">
           <Link
             to="/admin/rooms/new"
-            className="px-5 py-3 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40"
+            className="px-5 py-3 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40"
           >
             <Plus className="w-4 h-4" />
             <span>Nueva Habitación</span>
@@ -67,18 +67,18 @@ export default function DashboardPage() {
               Habitaciones
             </span>
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-serif font-bold text-[#3D1347]">
+              <span className="text-3xl font-serif font-bold text-[#4d1a4d]">
                 {rooms.length}
               </span>
               <span className="text-xs font-semibold text-emerald-600">
                 ({activeRoomsCount} publicadas)
               </span>
             </div>
-            <Link to="/admin/rooms" className="text-xs text-[#3D1347] font-semibold hover:underline mt-2 inline-block">
+            <Link to="/admin/rooms" className="text-xs text-[#4d1a4d] font-semibold hover:underline mt-2 inline-block">
               Gestionar catálogo →
             </Link>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-[#3D1347] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-[#4d1a4d] flex items-center justify-center">
             <BedDouble className="w-6 h-6" />
           </div>
         </div>
@@ -92,11 +92,11 @@ export default function DashboardPage() {
             <span className="text-3xl font-serif font-bold text-slate-900">
               {experiences.length}
             </span>
-            <Link to="/admin/content" className="text-xs text-[#5d205c] font-semibold hover:underline mt-2 inline-block">
+            <Link to="/admin/content" className="text-xs text-[#5e265e] font-semibold hover:underline mt-2 inline-block">
               Ver actividades →
             </Link>
           </div>
-          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-[#5d205c] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-purple-50 text-[#5e265e] flex items-center justify-center">
             <Compass className="w-6 h-6" />
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function DashboardPage() {
             <span className="text-3xl font-serif font-bold text-slate-900">
               {services.length}
             </span>
-            <Link to="/admin/content" className="text-xs text-[#3D1347] font-semibold hover:underline mt-2 inline-block">
+            <Link to="/admin/content" className="text-xs text-[#4d1a4d] font-semibold hover:underline mt-2 inline-block">
               Ver servicios →
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function DashboardPage() {
             <span className="text-3xl font-serif font-bold text-slate-900">
               {reviews.length}
             </span>
-            <Link to="/admin/reviews" className="text-xs text-[#3D1347] font-semibold hover:underline mt-2 inline-block">
+            <Link to="/admin/reviews" className="text-xs text-[#4d1a4d] font-semibold hover:underline mt-2 inline-block">
               Gestionar opiniones →
             </Link>
           </div>
@@ -154,7 +154,7 @@ export default function DashboardPage() {
             </div>
             <Link
               to="/admin/rooms"
-              className="text-xs font-bold text-[#3D1347] hover:underline"
+              className="text-xs font-bold text-[#4d1a4d] hover:underline"
             >
               Ver todas ({rooms.length})
             </Link>
@@ -186,7 +186,7 @@ export default function DashboardPage() {
                       </div>
                     </td>
                     <td className="py-3 px-3">
-                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-purple-50 text-[#3D1347] border border-purple-100">
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-purple-50 text-[#4d1a4d] border border-purple-100">
                         {room.category}
                       </span>
                     </td>
@@ -195,7 +195,7 @@ export default function DashboardPage() {
                     <td className="py-3 px-3 text-right">
                       <Link
                         to={`/admin/rooms/edit/${room.id}`}
-                        className="text-xs font-bold text-[#5d205c] hover:text-[#7a2b79] transition-colors"
+                        className="text-xs font-bold text-[#5e265e] hover:text-[#8d398d] transition-colors"
                       >
                         Editar
                       </Link>
@@ -212,7 +212,7 @@ export default function DashboardPage() {
           {/* TARJETA CONTACTO RÁPIDO */}
           <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
             <h3 className="font-serif font-bold text-base text-slate-900 mb-4 flex items-center gap-2">
-              <PhoneCall className="w-4 h-4 text-[#5d205c]" />
+              <PhoneCall className="w-4 h-4 text-[#5e265e]" />
               <span>Canales de Contacto Directo</span>
             </h3>
 
@@ -244,7 +244,7 @@ export default function DashboardPage() {
           </div>
 
           {/* TARJETA ACCESO USUARIOS */}
-          <div className="bg-gradient-to-br from-slate-900 to-[#2A0B33] text-white rounded-3xl p-6 shadow-md border border-purple-400/30">
+          <div className="bg-gradient-to-br from-slate-900 to-[#381238] text-white rounded-3xl p-6 shadow-md border border-purple-400/30">
             <div className="flex items-center gap-2 text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
               <Users className="w-4 h-4" />
               <span>Seguridad & Personal</span>
@@ -257,7 +257,7 @@ export default function DashboardPage() {
             </p>
             <Link
               to="/admin/users"
-              className="inline-flex items-center justify-center gap-2 w-full py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white rounded-xl font-bold text-xs transition-all shadow-md cursor-pointer border border-purple-400/40"
+              className="inline-flex items-center justify-center gap-2 w-full py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white rounded-xl font-bold text-xs transition-all shadow-md cursor-pointer border border-purple-400/40"
             >
               <UserPlus className="w-3.5 h-3.5" />
               <span>Administrar Usuarios</span>

@@ -11,12 +11,12 @@ export default function Location() {
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#5d205c]/10 text-[#5d205c] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
-            <MapPin className="w-3.5 h-3.5 text-[#5d205c]" />
+          <div className="inline-flex items-center gap-2 bg-[#5e265e]/10 text-[#5e265e] px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
+            <MapPin className="w-3.5 h-3.5 text-[#5e265e]" />
             <span>Encarnación - Paraguay</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 tracking-tight mb-4">
-            Ubicación <span className="text-[#5d205c]">Estratégica</span>
+            Ubicación <span className="text-[#5e265e]">Estratégica</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
             En el corazón céntrico de Encarnación, rodeado de alta gastronomía, comercios y a solo minutos del atractivo principal del Sur paraguayo.
@@ -27,11 +27,11 @@ export default function Location() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* INFO CARD (5 COLS) */}
-          <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-purple-400/30 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#581C68]/30 rounded-full blur-2xl pointer-events-none" />
+          <div className="lg:col-span-5 bg-[#381238] text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-purple-400/30 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#722672]/30 rounded-full blur-2xl pointer-events-none" />
 
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#5d205c]/30 border border-purple-400/40 px-3 py-1 rounded-full text-xs font-semibold text-white mb-6">
+              <div className="inline-flex items-center gap-2 bg-[#5e265e]/30 border border-purple-400/40 px-3 py-1 rounded-full text-xs font-semibold text-white mb-6">
                 <Compass className="w-3.5 h-3.5 text-purple-300" />
                 <span>Punto Turístico Clave</span>
               </div>
@@ -93,7 +93,7 @@ export default function Location() {
               href={settings.mapsUrl || "https://maps.google.com/?q=Encarnacion+Paraguay+LuxSur+Hotel"}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm cursor-pointer border border-purple-400/40"
+              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm cursor-pointer border border-purple-400/40"
             >
               <Navigation className="w-4 h-4" />
               <span>Abrir Ubicación en Google Maps</span>

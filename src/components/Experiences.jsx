@@ -15,16 +15,16 @@ export default function Experiences() {
   };
 
   return (
-    <section id="experiencias" className="py-24 bg-[#2A0B33] text-white relative overflow-hidden">
+    <section id="experiencias" className="py-24 bg-[#381238] text-white relative overflow-hidden">
       {/* BACKGROUND ACCENTS */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#581C68]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#5d205c]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#722672]/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#5e265e]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#5d205c]/30 border border-purple-400/40 px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-white mb-3">
+          <div className="inline-flex items-center gap-2 bg-[#5e265e]/30 border border-purple-400/40 px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-white mb-3">
             <Sparkles className="w-3.5 h-3.5 text-purple-300" />
             <span>LuxSur Moments</span>
           </div>
@@ -41,7 +41,7 @@ export default function Experiences() {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="group relative bg-[#3D1347]/80 rounded-2xl overflow-hidden border border-purple-400/30 shadow-xl hover:shadow-2xl hover:border-purple-300 transition-all duration-500 flex flex-col justify-between"
+              className="group relative bg-[#4d1a4d]/80 rounded-2xl overflow-hidden border border-purple-400/30 shadow-xl hover:shadow-2xl hover:border-purple-300 transition-all duration-500 flex flex-col justify-between"
             >
               {/* IMAGE */}
               <div className="relative h-56 overflow-hidden bg-slate-950">
@@ -50,7 +50,7 @@ export default function Experiences() {
                   alt={exp.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A0B33] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#381238] via-transparent to-transparent opacity-80" />
 
                 {/* TAG BADGE */}
                 <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-purple-400/40 px-3 py-1 rounded-full text-[11px] font-semibold text-white flex items-center gap-1.5">
@@ -77,7 +77,7 @@ export default function Experiences() {
                   href={settings.cloudbedsUrl || "https://hotels.cloudbeds.com/es/reservation/ayuGKi/?currency=pyg"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-between text-xs font-bold text-white py-2.5 px-3 rounded-xl bg-[#5d205c]/80 hover:bg-[#5d205c] border border-purple-400/40 transition-all duration-300 shadow-md"
+                  className="w-full inline-flex items-center justify-between text-xs font-bold text-white py-2.5 px-3 rounded-xl bg-[#5e265e]/80 hover:bg-[#5e265e] border border-purple-400/40 transition-all duration-300 shadow-md"
                 >
                   <span>Reservar Paquete</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

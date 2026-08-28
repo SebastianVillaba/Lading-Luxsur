@@ -32,8 +32,8 @@ export default function RoomCard({ room, onSelectRoom }) {
                 room.badgeType === 'urgent'
                   ? 'bg-rose-600 text-white animate-pulse'
                   : room.badgeType === 'popular'
-                  ? 'bg-gradient-to-r from-[#5d205c] to-[#7a2b79] text-white border border-purple-300/40'
-                  : 'bg-[#3D1347] text-white border border-purple-400/40'
+                  ? 'bg-gradient-to-r from-[#5e265e] to-[#8d398d] text-white border border-purple-300/40'
+                  : 'bg-[#4d1a4d] text-white border border-purple-400/40'
               }`}>
                 <AlertCircle className="w-3.5 h-3.5" />
                 {room.badge}
@@ -58,15 +58,15 @@ export default function RoomCard({ room, onSelectRoom }) {
           {/* TECHNICAL SPECIFICATIONS GRID */}
           <div className="grid grid-cols-3 gap-2 py-3 px-3 bg-slate-50 rounded-xl border border-slate-200/60 mb-5 text-center text-slate-700 text-xs font-medium">
             <div className="flex flex-col items-center justify-center p-1">
-              <Users className="w-4 h-4 text-[#5d205c] mb-1" />
+              <Users className="w-4 h-4 text-[#5e265e] mb-1" />
               <span>{room.guestsLabel}</span>
             </div>
             <div className="flex flex-col items-center justify-center p-1 border-x border-slate-200">
-              <Maximize2 className="w-4 h-4 text-[#5d205c] mb-1" />
+              <Maximize2 className="w-4 h-4 text-[#5e265e] mb-1" />
               <span>{room.size}</span>
             </div>
             <div className="flex flex-col items-center justify-center p-1">
-              <Bed className="w-4 h-4 text-[#5d205c] mb-1" />
+              <Bed className="w-4 h-4 text-[#5e265e] mb-1" />
               <span className="truncate max-w-[90px]" title={room.bed}>{room.bed}</span>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function RoomCard({ room, onSelectRoom }) {
             {featuresList.slice(0, 4).map((feature, idx) => (
               <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
                 <div className="w-4 h-4 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3 h-3 text-[#5d205c]" />
+                  <Check className="w-3 h-3 text-[#5e265e]" />
                 </div>
                 <span className="truncate">{feature}</span>
               </div>

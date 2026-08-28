@@ -20,7 +20,7 @@ export default function History() {
   return (
     <section id="historia" className="py-24 bg-white relative overflow-hidden">
       {/* BACKGROUND ACCENTS */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#5d205c]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#5e265e]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-900/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -41,7 +41,7 @@ export default function History() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-70" />
                 
                 {/* FLOATING OVERLAY INSIDE IMAGE */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#2A0B33]/90 backdrop-blur-md border border-purple-400/30 text-white shadow-xl">
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#381238]/90 backdrop-blur-md border border-purple-400/30 text-white shadow-xl">
                   <div className="flex items-center gap-2 mb-1">
                     <Sparkles className="w-4 h-4 text-purple-300 flex-shrink-0" />
                     <span className="text-xs font-bold uppercase tracking-wider text-purple-200">
@@ -55,7 +55,7 @@ export default function History() {
               </div>
 
               {/* FLOATING BADGE CORNER */}
-              <div className="absolute -top-5 -left-5 bg-gradient-to-br from-[#5d205c] to-[#7a2b79] text-white p-4 rounded-2xl shadow-xl border border-purple-300/40 hidden sm:flex items-center gap-3">
+              <div className="absolute -top-5 -left-5 bg-gradient-to-br from-[#5e265e] to-[#8d398d] text-white p-4 rounded-2xl shadow-xl border border-purple-300/40 hidden sm:flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
                   <Award className="w-5 h-5 text-purple-200" />
                 </div>
@@ -76,14 +76,14 @@ export default function History() {
           <div className="lg:col-span-7 flex flex-col justify-center">
             
             {/* SECTION BADGE */}
-            <div className="inline-flex items-center gap-2 bg-[#5d205c]/10 text-[#5d205c] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit border border-[#5d205c]/20">
-              <Compass className="w-3.5 h-3.5 text-[#5d205c]" />
+            <div className="inline-flex items-center gap-2 bg-[#5e265e]/10 text-[#5e265e] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit border border-[#5e265e]/20">
+              <Compass className="w-3.5 h-3.5 text-[#5e265e]" />
               <span>{tagText}</span>
             </div>
 
             {/* SUBTITLE IN ALLEGRO & SECTION TITLE */}
             <div className="mb-6">
-              <span className="font-serif text-3xl sm:text-4xl text-[#5d205c] block mb-1">
+              <span className="font-serif text-3xl sm:text-4xl text-[#5e265e] block mb-1">
                 {subtitleText}
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
@@ -93,7 +93,7 @@ export default function History() {
 
             {/* STORY PARAGRAPHS */}
             <div className="space-y-4 text-slate-600 text-base sm:text-lg font-normal leading-relaxed mb-8">
-              <p className="border-l-4 border-[#5d205c] pl-4 italic text-slate-700 bg-purple-50/50 py-2 rounded-r-xl">
+              <p className="border-l-4 border-[#5e265e] pl-4 italic text-slate-700 bg-purple-50/50 py-2 rounded-r-xl">
                 {p1}
               </p>
               <p className="pl-4 text-slate-600">
@@ -104,25 +104,25 @@ export default function History() {
             {/* KEY HIGHLIGHTS PILLS */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-100">
               <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-                <Building className="w-5 h-5 text-[#5d205c] mx-auto mb-1.5" />
+                <Building className="w-5 h-5 text-[#5e265e] mx-auto mb-1.5" />
                 <span className="text-sm font-bold text-slate-900 block">Arquitectura</span>
                 <span className="text-[11px] text-slate-500 font-medium">Moderna & Confort</span>
               </div>
 
               <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-                <Compass className="w-5 h-5 text-[#5d205c] mx-auto mb-1.5" />
+                <Compass className="w-5 h-5 text-[#5e265e] mx-auto mb-1.5" />
                 <span className="text-sm font-bold text-slate-900 block">Vista 360°</span>
                 <span className="text-[11px] text-slate-500 font-medium">Terraza Rooftop</span>
               </div>
 
               <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-                <MapPin className="w-5 h-5 text-[#5d205c] mx-auto mb-1.5" />
+                <MapPin className="w-5 h-5 text-[#5e265e] mx-auto mb-1.5" />
                 <span className="text-sm font-bold text-slate-900 block">Playa San José</span>
                 <span className="text-[11px] text-slate-500 font-medium">A solo minutos</span>
               </div>
 
               <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-                <HeartHandshake className="w-5 h-5 text-[#5d205c] mx-auto mb-1.5" />
+                <HeartHandshake className="w-5 h-5 text-[#5e265e] mx-auto mb-1.5" />
                 <span className="text-sm font-bold text-slate-900 block">Hospitalidad</span>
                 <span className="text-[11px] text-slate-500 font-medium">Cálida y Exclusiva</span>
               </div>

@@ -37,7 +37,7 @@ export default function ConfirmModal({ isOpen, title, message, onConfirm, onCanc
                 className={`px-5 py-2 text-sm font-bold text-white rounded-xl shadow-md transition-all cursor-pointer ${
                   isDanger
                     ? 'bg-rose-600 hover:bg-rose-700'
-                    : 'bg-[#3D1347] hover:bg-[#2A0B33]'
+                    : 'bg-[#4d1a4d] hover:bg-[#381238]'
                 }`}
               >
                 {confirmText}

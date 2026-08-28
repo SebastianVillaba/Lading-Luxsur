@@ -21,11 +21,11 @@
 }
 
 @theme {
-  --color-purple-imperial: #3D1347;
-  --color-purple-deep: #2A0B33;
-  --color-purple-light: #581C68;
-  --color-purple-primary: #5d205c;
-  --color-purple-accent: #7a2b79;
+  --color-purple-imperial: #4d1a4d;
+  --color-purple-deep: #381238;
+  --color-purple-light: #722672;
+  --color-purple-primary: #5e265e;
+  --color-purple-accent: #8d398d;
   --color-purple-soft: #dfb2e4;
   --color-gold-warm: #D4AF37;
   --color-gold-muted: #C5A059;
@@ -62,10 +62,10 @@
 
 /* Custom Utilities and Glassmorphism */
 .glass-dark {
-  background: rgba(42, 11, 51, 0.75);
+  background: rgba(56, 18, 56, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(93, 32, 92, 0.3);
+  border: 1px solid rgba(94, 38, 94, 0.3);
 }
 
 .glass-card {
@@ -83,15 +83,15 @@
 }
 
 .purple-solid-gradient {
-  background: linear-gradient(135deg, #5d205c 0%, #7a2b79 100%);
+  background: linear-gradient(135deg, #5e265e 0%, #8d398d 100%);
 }
 
 .purple-border-glow {
-  box-shadow: 0 0 15px rgba(93, 32, 92, 0.35);
+  box-shadow: 0 0 15px rgba(94, 38, 94, 0.35);
 }
 
 .purple-gradient-bg {
-  background: linear-gradient(135deg, #2A0B33 0%, #3D1347 50%, #5d205c 100%);
+  background: linear-gradient(135deg, #381238 0%, #4d1a4d 50%, #5e265e 100%);
 }
 
 /* Custom Scrollbar */
@@ -99,14 +99,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #2A0B33;
+  background: #381238;
 }
 ::-webkit-scrollbar-thumb {
-  background: #5d205c;
+  background: #5e265e;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7a2b79;
+  background: #8d398d;
 }
 
 

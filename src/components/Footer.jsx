@@ -7,7 +7,7 @@ export default function Footer() {
   const { settings } = useHotelData();
 
   return (
-    <footer className="bg-[#1A0621] text-white pt-16 pb-8 border-t border-purple-400/30">
+    <footer className="bg-[#2e0e2e] text-white pt-16 pb-8 border-t border-purple-400/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -15,8 +15,8 @@ export default function Footer() {
           {/* BRAND COLUMN */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5d205c] via-[#7a2b79] to-[#3D1347] p-0.5 shadow-lg">
-                <div className="w-full h-full bg-[#3D1347] rounded-full flex flex-col items-center justify-center relative overflow-hidden">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5e265e] via-[#8d398d] to-[#4d1a4d] p-0.5 shadow-lg">
+                <div className="w-full h-full bg-[#4d1a4d] rounded-full flex flex-col items-center justify-center relative overflow-hidden">
                   <img 
                     src="/images/LOGO PNG LUXSUR BLANCO.png" 
                     alt="Logo Luxsur" 

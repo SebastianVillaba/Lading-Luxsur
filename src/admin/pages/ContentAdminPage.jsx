@@ -196,7 +196,7 @@ export default function ContentAdminPage() {
           onClick={() => setActiveSection('history')}
           className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
             activeSection === 'history'
-              ? 'bg-[#5d205c] text-white shadow'
+              ? 'bg-[#5e265e] text-white shadow'
               : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
           }`}
         >
@@ -208,7 +208,7 @@ export default function ContentAdminPage() {
           onClick={() => setActiveSection('experiences')}
           className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
             activeSection === 'experiences'
-              ? 'bg-[#5d205c] text-white shadow'
+              ? 'bg-[#5e265e] text-white shadow'
               : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
           }`}
         >
@@ -220,7 +220,7 @@ export default function ContentAdminPage() {
           onClick={() => setActiveSection('services')}
           className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
             activeSection === 'services'
-              ? 'bg-[#5d205c] text-white shadow'
+              ? 'bg-[#5e265e] text-white shadow'
               : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
           }`}
         >
@@ -232,7 +232,7 @@ export default function ContentAdminPage() {
           onClick={() => setActiveSection('rooftop')}
           className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
             activeSection === 'rooftop'
-              ? 'bg-[#5d205c] text-white shadow'
+              ? 'bg-[#5e265e] text-white shadow'
               : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
           }`}
         >
@@ -246,7 +246,7 @@ export default function ContentAdminPage() {
         <form onSubmit={handleSaveHistory} className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5 animate-fadeIn max-w-3xl">
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <h3 className="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-[#5d205c]" />
+              <BookOpen className="w-5 h-5 text-[#5e265e]" />
               <span>Historia & Esencia de LuxSur</span>
             </h3>
             <div className="flex items-center gap-3">
@@ -255,13 +255,13 @@ export default function ContentAdminPage() {
                   type="checkbox"
                   checked={historyForm.isActive}
                   onChange={(e) => setHistoryForm({ ...historyForm, isActive: e.target.checked })}
-                  className="rounded border-slate-300 text-[#5d205c] focus:ring-[#5d205c]"
+                  className="rounded border-slate-300 text-[#5e265e] focus:ring-[#5e265e]"
                 />
                 <span>Sección Visible</span>
               </label>
               <button
                 type="submit"
-                className="px-5 py-2 bg-[#5d205c] hover:bg-[#7a2b79] text-white font-bold text-xs rounded-xl shadow cursor-pointer transition-all"
+                className="px-5 py-2 bg-[#5e265e] hover:bg-[#8d398d] text-white font-bold text-xs rounded-xl shadow cursor-pointer transition-all"
               >
                 Guardar Historia
               </button>
@@ -277,7 +277,7 @@ export default function ContentAdminPage() {
                 type="text"
                 value={historyForm.tag}
                 onChange={(e) => setHistoryForm({ ...historyForm, tag: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 placeholder="Nuestra Historia & Esencia"
               />
             </div>
@@ -289,7 +289,7 @@ export default function ContentAdminPage() {
                 type="text"
                 value={historyForm.subtitle}
                 onChange={(e) => setHistoryForm({ ...historyForm, subtitle: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 placeholder="Nuestra Historia"
               />
             </div>
@@ -303,7 +303,7 @@ export default function ContentAdminPage() {
               type="text"
               value={historyForm.title}
               onChange={(e) => setHistoryForm({ ...historyForm, title: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
               placeholder="Pasión por los Detalles y Hospitalidad Boutique"
             />
           </div>
@@ -316,7 +316,7 @@ export default function ContentAdminPage() {
               rows={3}
               value={historyForm.paragraph1}
               onChange={(e) => setHistoryForm({ ...historyForm, paragraph1: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] leading-relaxed"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e] leading-relaxed"
               placeholder="En Hotel Luxsur nacimos con la convicción..."
             />
           </div>
@@ -329,7 +329,7 @@ export default function ContentAdminPage() {
               rows={3}
               value={historyForm.paragraph2}
               onChange={(e) => setHistoryForm({ ...historyForm, paragraph2: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] leading-relaxed"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e] leading-relaxed"
               placeholder="Desde nuestras habitaciones temáticas..."
             />
           </div>
@@ -342,7 +342,7 @@ export default function ContentAdminPage() {
               type="text"
               value={historyForm.quote}
               onChange={(e) => setHistoryForm({ ...historyForm, quote: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
               placeholder="La excelencia se encuentra en los detalles"
             />
           </div>
@@ -360,7 +360,7 @@ export default function ContentAdminPage() {
           <div className="pt-2 flex justify-end">
             <button
               type="submit"
-              className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-sm rounded-xl shadow-md cursor-pointer transition-all"
+              className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-sm rounded-xl shadow-md cursor-pointer transition-all"
             >
               Guardar Cambios de Historia
             </button>
@@ -380,7 +380,7 @@ export default function ContentAdminPage() {
                 setExpForm({ id: `exp-${Date.now()}`, title: '', subtitle: '', description: '', image: '', tag: 'Turismo', isActive: true });
                 setExpModal({ isOpen: true, data: null });
               }}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5d205c] hover:bg-[#7a2b79] text-white rounded-xl text-xs font-bold shadow cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5e265e] hover:bg-[#8d398d] text-white rounded-xl text-xs font-bold shadow cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Nueva Experiencia</span>
@@ -394,7 +394,7 @@ export default function ContentAdminPage() {
                   <div className="relative h-36 bg-slate-900">
                     <img src={exp.image} alt={exp.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-                    <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#3D1347] text-white border border-purple-400/40">
+                    <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#4d1a4d] text-white border border-purple-400/40">
                       {exp.tag}
                     </span>
                     <span className="absolute bottom-2 left-2 text-white font-serif font-bold text-sm">
@@ -402,7 +402,7 @@ export default function ContentAdminPage() {
                     </span>
                   </div>
                   <div className="p-4">
-                    <span className="text-[11px] font-semibold text-[#5d205c] uppercase block mb-1">{exp.subtitle}</span>
+                    <span className="text-[11px] font-semibold text-[#5e265e] uppercase block mb-1">{exp.subtitle}</span>
                     <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">{exp.description}</p>
                   </div>
                 </div>
@@ -442,7 +442,7 @@ export default function ContentAdminPage() {
                 setServForm({ id: `serv-${Date.now()}`, icon: 'Wifi', title: '', description: '', isActive: true });
                 setServModal({ isOpen: true, data: null });
               }}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5d205c] hover:bg-[#7a2b79] text-white rounded-xl text-xs font-bold shadow cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#5e265e] hover:bg-[#8d398d] text-white rounded-xl text-xs font-bold shadow cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Nuevo Servicio</span>
@@ -454,7 +454,7 @@ export default function ContentAdminPage() {
               <div key={serv.id} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#5d205c] flex items-center justify-center font-bold text-xs">
+                    <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#5e265e] flex items-center justify-center font-bold text-xs">
                       <CheckCircle2 className="w-5 h-5" />
                     </div>
                     <div>
@@ -493,12 +493,12 @@ export default function ContentAdminPage() {
         <form onSubmit={handleSaveRooftop} className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5 animate-fadeIn max-w-3xl">
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <h3 className="font-serif font-bold text-lg text-slate-900 flex items-center gap-2">
-              <UtensilsCrossed className="w-5 h-5 text-[#5d205c]" />
+              <UtensilsCrossed className="w-5 h-5 text-[#5e265e]" />
               <span>Restaurant Panorámico & Rooftop Bar</span>
             </h3>
             <button
               type="submit"
-              className="px-5 py-2 bg-[#5d205c] hover:bg-[#7a2b79] text-white font-bold text-xs rounded-xl shadow cursor-pointer"
+              className="px-5 py-2 bg-[#5e265e] hover:bg-[#8d398d] text-white font-bold text-xs rounded-xl shadow cursor-pointer"
             >
               Guardar Restaurante
             </button>
@@ -512,7 +512,7 @@ export default function ContentAdminPage() {
               type="text"
               value={rooftopForm.title}
               onChange={(e) => setRooftopForm({ ...rooftopForm, title: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
             />
           </div>
 
@@ -524,7 +524,7 @@ export default function ContentAdminPage() {
               type="text"
               value={rooftopForm.subtitle}
               onChange={(e) => setRooftopForm({ ...rooftopForm, subtitle: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
             />
           </div>
 
@@ -536,7 +536,7 @@ export default function ContentAdminPage() {
               type="text"
               value={rooftopForm.hours}
               onChange={(e) => setRooftopForm({ ...rooftopForm, hours: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
             />
           </div>
 
@@ -558,14 +558,14 @@ export default function ContentAdminPage() {
               rows={4}
               value={rooftopForm.description}
               onChange={(e) => setRooftopForm({ ...rooftopForm, description: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
             />
           </div>
 
           <div className="pt-2">
             <button
               type="submit"
-              className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-sm rounded-xl shadow-md cursor-pointer"
+              className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-sm rounded-xl shadow-md cursor-pointer"
             >
               Guardar Cambios del Restaurante
             </button>
@@ -588,7 +588,7 @@ export default function ContentAdminPage() {
                   required
                   value={expForm.title}
                   onChange={(e) => setExpForm({ ...expForm, title: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div>
@@ -597,7 +597,7 @@ export default function ContentAdminPage() {
                   type="text"
                   value={expForm.subtitle}
                   onChange={(e) => setExpForm({ ...expForm, subtitle: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div>
@@ -606,7 +606,7 @@ export default function ContentAdminPage() {
                   type="text"
                   value={expForm.tag}
                   onChange={(e) => setExpForm({ ...expForm, tag: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div>
@@ -624,7 +624,7 @@ export default function ContentAdminPage() {
                   rows={3}
                   value={expForm.description}
                   onChange={(e) => setExpForm({ ...expForm, description: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div className="flex justify-end gap-2 pt-3 border-t border-slate-100">
@@ -637,7 +637,7 @@ export default function ContentAdminPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 text-xs font-bold text-white bg-[#5d205c] hover:bg-[#7a2b79] rounded-xl shadow"
+                  className="px-5 py-2 text-xs font-bold text-white bg-[#5e265e] hover:bg-[#8d398d] rounded-xl shadow"
                 >
                   Guardar
                 </button>
@@ -683,7 +683,7 @@ export default function ContentAdminPage() {
                   required
                   value={servForm.title}
                   onChange={(e) => setServForm({ ...servForm, title: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div>
@@ -692,7 +692,7 @@ export default function ContentAdminPage() {
                   rows={3}
                   value={servForm.description}
                   onChange={(e) => setServForm({ ...servForm, description: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
               <div className="flex justify-end gap-2 pt-3 border-t border-slate-100">
@@ -705,7 +705,7 @@ export default function ContentAdminPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 text-xs font-bold text-white bg-[#5d205c] hover:bg-[#7a2b79] rounded-xl shadow"
+                  className="px-5 py-2 text-xs font-bold text-white bg-[#5e265e] hover:bg-[#8d398d] rounded-xl shadow"
                 >
                   Guardar
                 </button>

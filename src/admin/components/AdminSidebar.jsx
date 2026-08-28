@@ -35,7 +35,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
 
       {/* SIDEBAR CONTAINER */}
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-64 bg-[#2A0B33] text-white flex flex-col justify-between border-r border-[#3D1347]/50 shadow-2xl transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 z-40 h-screen w-64 bg-[#381238] text-white flex flex-col justify-between border-r border-[#4d1a4d]/50 shadow-2xl transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
@@ -43,8 +43,8 @@ export default function AdminSidebar({ isOpen, onClose }) {
           {/* LOGO & BRAND */}
           <div className="p-6 border-b border-purple-900/40">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#5d205c] via-[#7a2b79] to-[#3D1347] p-0.5 shadow-lg flex-shrink-0">
-                <div className="w-full h-full bg-[#3D1347] rounded-[10px] flex items-center justify-center overflow-hidden p-1">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#5e265e] via-[#8d398d] to-[#4d1a4d] p-0.5 shadow-lg flex-shrink-0">
+                <div className="w-full h-full bg-[#4d1a4d] rounded-[10px] flex items-center justify-center overflow-hidden p-1">
                   <img
                     src="/images/LOGO PNG LUXSUR BLANCO.png"
                     alt="Logo LuxSur"
@@ -76,7 +76,7 @@ export default function AdminSidebar({ isOpen, onClose }) {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-[#5d205c] text-white shadow-lg shadow-purple-950/40 border border-purple-400/40'
+                        ? 'bg-[#5e265e] text-white shadow-lg shadow-purple-950/40 border border-purple-400/40'
                         : 'text-slate-300 hover:bg-white/5 hover:text-white'
                     }`
                   }

@@ -199,7 +199,7 @@ export default function RoomEditorPage() {
           <button
             onClick={handleSubmit}
             disabled={isSaving}
-            className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40 disabled:opacity-50"
+            className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40 disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             <span>{isSaving ? 'Guardando...' : 'Guardar Cambios'}</span>
@@ -242,7 +242,7 @@ export default function RoomEditorPage() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === tab.id
-                  ? 'bg-[#5d205c] text-white shadow-md shadow-purple-950/20'
+                  ? 'bg-[#5e265e] text-white shadow-md shadow-purple-950/20'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -276,7 +276,7 @@ export default function RoomEditorPage() {
                   placeholder="Ej: Suite Deluxe con Balcón"
                   value={formData.name}
                   onChange={handleNameChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
 
@@ -289,7 +289,7 @@ export default function RoomEditorPage() {
                     <Link
                       to="/admin/categories"
                       target="_blank"
-                      className="text-[11px] font-semibold text-[#5d205c] hover:underline"
+                      className="text-[11px] font-semibold text-[#5e265e] hover:underline"
                     >
                       + Gestionar
                     </Link>
@@ -297,7 +297,7 @@ export default function RoomEditorPage() {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] bg-white"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e] bg-white"
                   >
                     {categoriesList.map(c => (
                       <option key={c} value={c}>{c}</option>
@@ -316,7 +316,7 @@ export default function RoomEditorPage() {
                     placeholder="suite-deluxe"
                     value={formData.id}
                     onChange={(e) => setFormData({ ...formData, id: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c] font-mono text-xs bg-slate-50 disabled:opacity-60"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e] font-mono text-xs bg-slate-50 disabled:opacity-60"
                   />
                 </div>
               </div>
@@ -334,7 +334,7 @@ export default function RoomEditorPage() {
                       onClick={() => setFormData({ ...formData, badge: b.value, badgeType: b.type })}
                       className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors cursor-pointer border ${
                         formData.badge === b.value
-                          ? 'bg-[#5d205c] text-white border-[#5d205c]'
+                          ? 'bg-[#5e265e] text-white border-[#5e265e]'
                           : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                       }`}
                     >
@@ -347,7 +347,7 @@ export default function RoomEditorPage() {
                   placeholder="O escribe una personalizada (ej: Vista Panorámica)"
                   value={formData.badge}
                   onChange={(e) => setFormData({ ...formData, badge: e.target.value })}
-                  className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
 
@@ -361,7 +361,7 @@ export default function RoomEditorPage() {
                   placeholder="Describe la atmósfera, iluminación, mobiliario boutique y vistas..."
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
 
@@ -382,7 +382,7 @@ export default function RoomEditorPage() {
                     onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5d205c]"></div>
+                  <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5e265e]"></div>
                 </label>
               </div>
             </div>
@@ -407,7 +407,7 @@ export default function RoomEditorPage() {
                     max="10"
                     value={formData.guests}
                     onChange={handleGuestsChange}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                   />
                 </div>
 
@@ -420,7 +420,7 @@ export default function RoomEditorPage() {
                     placeholder="Ej: 4 Personas o 2 Adultos + 1 Niño"
                     value={formData.guestsLabel}
                     onChange={(e) => setFormData({ ...formData, guestsLabel: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                   />
                 </div>
               </div>
@@ -438,7 +438,7 @@ export default function RoomEditorPage() {
                       onClick={() => setFormData({ ...formData, size: s })}
                       className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
                         formData.size === s
-                          ? 'bg-[#5d205c] text-white border-[#5d205c]'
+                          ? 'bg-[#5e265e] text-white border-[#5e265e]'
                           : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                       }`}
                     >
@@ -451,7 +451,7 @@ export default function RoomEditorPage() {
                   placeholder="Ej: 45 m² o 500 sq ft"
                   value={formData.size}
                   onChange={(e) => setFormData({ ...formData, size: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
                 />
               </div>
 
@@ -468,7 +468,7 @@ export default function RoomEditorPage() {
                       onClick={() => setFormData({ ...formData, bed: b })}
                       className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors cursor-pointer border ${
                         formData.bed === b
-                          ? 'bg-[#5d205c] text-white border-[#5d205c]'
+                          ? 'bg-[#5e265e] text-white border-[#5e265e]'
                           : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                       }`}
                     >
@@ -481,7 +481,7 @@ export default function RoomEditorPage() {
                   placeholder="Ej: 1 Cama King (200x200) + 1 Sofá Cama"
                   value={formData.bed}
                   onChange={(e) => setFormData({ ...formData, bed: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
                 />
               </div>
             </div>
@@ -526,7 +526,7 @@ export default function RoomEditorPage() {
                     placeholder="Ej: 616.000 Gs."
                     value={formData.pricePYG}
                     onChange={(e) => setFormData({ ...formData, pricePYG: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
                   />
                 </div>
 
@@ -539,7 +539,7 @@ export default function RoomEditorPage() {
                     placeholder="616000"
                     value={formData.priceNumeric}
                     onChange={(e) => setFormData({ ...formData, priceNumeric: Number(e.target.value) || 0 })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
                   />
                 </div>
               </div>
@@ -553,7 +553,7 @@ export default function RoomEditorPage() {
                   placeholder="https://hotels.cloudbeds.com/es/reservation/ayuGKi/?..."
                   value={formData.customBookingUrl}
                   onChange={(e) => setFormData({ ...formData, customBookingUrl: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
                 />
                 <span className="text-[11px] text-slate-400 block mt-1">
                   Si se deja vacío, se utilizará el enlace de Cloudbeds global configurado en el hotel.

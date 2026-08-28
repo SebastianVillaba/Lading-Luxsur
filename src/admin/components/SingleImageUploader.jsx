@@ -83,7 +83,7 @@ export default function SingleImageUploader({
         <button
           type="button"
           onClick={() => setShowUrlInput(!showUrlInput)}
-          className="text-[11px] text-slate-400 hover:text-[#3D1347] flex items-center gap-1 font-medium transition-colors cursor-pointer"
+          className="text-[11px] text-slate-400 hover:text-[#4d1a4d] flex items-center gap-1 font-medium transition-colors cursor-pointer"
         >
           <LinkIcon className="w-3 h-3" />
           <span>{showUrlInput ? 'Ocultar URL' : 'O usar URL'}</span>
@@ -98,11 +98,11 @@ export default function SingleImageUploader({
             placeholder="https://images.unsplash.com/..."
             value={urlDraft}
             onChange={(e) => setUrlDraft(e.target.value)}
-            className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-[#5d205c] focus:outline-none"
+            className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-[#5e265e] focus:outline-none"
           />
           <button
             type="submit"
-            className="px-3 py-1.5 bg-[#5d205c] text-white rounded-lg text-xs font-bold hover:bg-[#7a2b79] transition-colors cursor-pointer"
+            className="px-3 py-1.5 bg-[#5e265e] text-white rounded-lg text-xs font-bold hover:bg-[#8d398d] transition-colors cursor-pointer"
           >
             Aplicar
           </button>
@@ -178,17 +178,17 @@ export default function SingleImageUploader({
           className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition-all flex flex-col items-center justify-center min-h-[140px] ${
             isUploading
               ? 'border-purple-400 bg-purple-50/50 pointer-events-none'
-              : 'border-slate-300 hover:border-[#5d205c] hover:bg-purple-50/20 bg-slate-50/50'
+              : 'border-slate-300 hover:border-[#5e265e] hover:bg-purple-50/20 bg-slate-50/50'
           }`}
         >
           {isUploading ? (
             <div className="flex flex-col items-center">
-              <Loader2 className="w-8 h-8 text-[#3D1347] animate-spin mb-2" />
-              <p className="text-xs font-bold text-[#3D1347]">Subiendo imagen al servidor...</p>
+              <Loader2 className="w-8 h-8 text-[#4d1a4d] animate-spin mb-2" />
+              <p className="text-xs font-bold text-[#4d1a4d]">Subiendo imagen al servidor...</p>
             </div>
           ) : (
             <>
-              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-[#3D1347] mb-2 shadow-xs">
+              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-[#4d1a4d] mb-2 shadow-xs">
                 <UploadCloud className="w-5 h-5" />
               </div>
               <p className="text-xs font-bold text-slate-700 mb-0.5">

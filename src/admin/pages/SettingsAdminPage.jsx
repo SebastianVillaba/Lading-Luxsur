@@ -88,7 +88,7 @@ export default function SettingsAdminPage() {
         <button
           onClick={handleSubmit}
           disabled={isSaving}
-          className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40 disabled:opacity-50 flex-shrink-0"
+          className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all flex items-center gap-2 cursor-pointer border border-purple-400/40 disabled:opacity-50 flex-shrink-0"
         >
           <Save className="w-4 h-4" />
           <span>{isSaving ? 'Guardando...' : 'Guardar Ajustes'}</span>
@@ -118,7 +118,7 @@ export default function SettingsAdminPage() {
         {/* SECCIÓN 1: IDENTIDAD INSTITUCIONAL */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
           <h3 className="text-base font-serif font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-2">
-            <Sliders className="w-4 h-4 text-[#5d205c]" />
+            <Sliders className="w-4 h-4 text-[#5e265e]" />
             <span>Identidad & Textos Institucionales</span>
           </h3>
 
@@ -131,7 +131,7 @@ export default function SettingsAdminPage() {
                 type="text"
                 value={formData.hotelName}
                 onChange={(e) => setFormData({ ...formData, hotelName: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
               />
             </div>
             <div>
@@ -141,7 +141,7 @@ export default function SettingsAdminPage() {
               <select
                 value={formData.stars}
                 onChange={(e) => setFormData({ ...formData, stars: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347] bg-white"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d] bg-white"
               >
                 <option value={3}>3 Estrellas</option>
                 <option value={4}>4 Estrellas</option>
@@ -158,7 +158,7 @@ export default function SettingsAdminPage() {
               type="text"
               value={formData.tagline}
               onChange={(e) => setFormData({ ...formData, tagline: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
           </div>
         </div>
@@ -184,7 +184,7 @@ export default function SettingsAdminPage() {
                   placeholder="595986495500"
                   value={formData.whatsappRaw}
                   onChange={(e) => setFormData({ ...formData, whatsappRaw: e.target.value.replace(/[^0-9]/g, '') })}
-                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347] font-mono"
+                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d] font-mono"
                 />
               </div>
               <span className="text-[11px] text-slate-400 block mt-1">
@@ -198,14 +198,14 @@ export default function SettingsAdminPage() {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                  <Phone className="w-4 h-4 text-[#3D1347]" />
+                  <Phone className="w-4 h-4 text-[#4d1a4d]" />
                 </div>
                 <input
                   type="text"
                   placeholder="+595 986 495 500"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                  className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
                 />
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function SettingsAdminPage() {
               placeholder="Hola LuxSur Hotel Boutique, deseo consultar disponibilidad..."
               value={formData.whatsappMessage}
               onChange={(e) => setFormData({ ...formData, whatsappMessage: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
           </div>
 
@@ -237,7 +237,7 @@ export default function SettingsAdminPage() {
                 placeholder="reservas@luxsurhotel.com.py"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+                className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
               />
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function SettingsAdminPage() {
               placeholder="https://hotels.cloudbeds.com/es/reservation/ayuGKi/?currency=pyg"
               value={formData.cloudbedsUrl}
               onChange={(e) => setFormData({ ...formData, cloudbedsUrl: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
             <span className="text-[11px] text-slate-400 block mt-1">
               Todos los botones de reserva generales de la landing page abrirán esta dirección.
@@ -283,7 +283,7 @@ export default function SettingsAdminPage() {
               placeholder="Encarnación, Itapúa - Paraguay"
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
           </div>
 
@@ -295,7 +295,7 @@ export default function SettingsAdminPage() {
               type="url"
               value={formData.mapsUrl}
               onChange={(e) => setFormData({ ...formData, mapsUrl: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
           </div>
 
@@ -307,7 +307,7 @@ export default function SettingsAdminPage() {
               rows={2}
               value={formData.googleMapsEmbed}
               onChange={(e) => setFormData({ ...formData, googleMapsEmbed: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#3D1347] font-mono"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#4d1a4d] font-mono"
             />
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function SettingsAdminPage() {
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
             <h3 className="text-base font-serif font-bold text-slate-900 flex items-center gap-2">
-              <Megaphone className="w-4 h-4 text-[#5d205c]" />
+              <Megaphone className="w-4 h-4 text-[#5e265e]" />
               <span>Banner de Anuncio Promocional (Opcional)</span>
             </h3>
             <label className="relative inline-flex items-center cursor-pointer">
@@ -326,7 +326,7 @@ export default function SettingsAdminPage() {
                 onChange={(e) => setFormData({ ...formData, isBannerActive: e.target.checked })}
                 className="sr-only peer"
               />
-              <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5d205c]"></div>
+              <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5e265e]"></div>
             </label>
           </div>
 
@@ -339,7 +339,7 @@ export default function SettingsAdminPage() {
               placeholder="¡Temporada de Verano en Encarnación! Consulta tarifas directas con desayuno incluido."
               value={formData.announcementBanner}
               onChange={(e) => setFormData({ ...formData, announcementBanner: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#3D1347]"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]"
             />
           </div>
         </div>

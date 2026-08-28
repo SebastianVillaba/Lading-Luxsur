@@ -37,12 +37,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1E0624] via-[#2A0B33] to-[#120317] flex items-center justify-center p-4 selection:bg-[#5d205c] selection:text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#2e0e2e] via-[#381238] to-[#200820] flex items-center justify-center p-4 selection:bg-[#5e265e] selection:text-white">
       <div className="w-full max-w-md">
         
         {/* BRAND LOGO CARD */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#5d205c] via-[#7a2b79] to-[#3D1347] text-white shadow-2xl mb-4 font-serif text-3xl font-bold border border-purple-400/40">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#5e265e] via-[#8d398d] to-[#4d1a4d] text-white shadow-2xl mb-4 font-serif text-3xl font-bold border border-purple-400/40">
             👑
           </div>
           <h1 className="text-3xl font-serif font-bold text-white tracking-tight">
@@ -84,7 +84,7 @@ export default function LoginPage() {
                   placeholder="Tu usuario"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5d205c] focus:bg-white transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5e265e] focus:bg-white transition-all"
                 />
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function LoginPage() {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5d205c] focus:bg-white transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5e265e] focus:bg-white transition-all"
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-2 py-3.5 px-4 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-sm rounded-xl shadow-lg shadow-purple-950/30 flex items-center justify-center gap-2 transition-all cursor-pointer border border-purple-400/40 disabled:opacity-50"
+              className="w-full mt-2 py-3.5 px-4 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-sm rounded-xl shadow-lg shadow-purple-950/30 flex items-center justify-center gap-2 transition-all cursor-pointer border border-purple-400/40 disabled:opacity-50"
             >
               {isSubmitting ? (
                 <span>Validando credenciales...</span>
@@ -131,7 +131,7 @@ export default function LoginPage() {
             </span>
             <a
               href="/"
-              className="text-[#3D1347] font-semibold hover:underline"
+              className="text-[#4d1a4d] font-semibold hover:underline"
             >
               Volver a la Web
             </a>

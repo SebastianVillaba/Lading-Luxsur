@@ -205,7 +205,7 @@ export default function CategoriesAdminPage() {
           </Link>
           <div>
             <h1 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight flex items-center gap-2.5">
-              <Layers className="w-7 h-7 text-[#5d205c]" />
+              <Layers className="w-7 h-7 text-[#5e265e]" />
               <span>Categorías de Habitaciones</span>
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -224,7 +224,7 @@ export default function CategoriesAdminPage() {
           <button
             type="button"
             onClick={openCreateModal}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-purple-400/40 cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs sm:text-sm rounded-xl shadow-lg shadow-purple-950/20 transition-all border border-purple-400/40 cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Nueva Categoría</span>
@@ -261,7 +261,7 @@ export default function CategoriesAdminPage() {
             placeholder="Buscar categoría por nombre..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#5d205c]"
+            className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#5e265e]"
           />
         </div>
 
@@ -290,8 +290,8 @@ export default function CategoriesAdminPage() {
                   {/* HEADER DE TARJETA */}
                   <div className="flex items-start justify-between gap-2 mb-3">
                     <div className="flex items-center gap-2">
-                      <div className="w-9 h-9 rounded-xl bg-purple-50 text-[#5d205c] flex items-center justify-center font-bold">
-                        <Tag className="w-4 h-4 text-[#5d205c]" />
+                      <div className="w-9 h-9 rounded-xl bg-purple-50 text-[#5e265e] flex items-center justify-center font-bold">
+                        <Tag className="w-4 h-4 text-[#5e265e]" />
                       </div>
                       <div>
                         <h3 className="font-serif font-bold text-base text-slate-900 leading-tight">
@@ -325,11 +325,11 @@ export default function CategoriesAdminPage() {
                     <span
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold ${
                         hasAssignedRooms
-                          ? 'bg-purple-50 text-[#5d205c] border border-purple-200 font-bold'
+                          ? 'bg-purple-50 text-[#5e265e] border border-purple-200 font-bold'
                           : 'bg-slate-50 text-slate-500 border border-slate-200'
                       }`}
                     >
-                      <BedDouble className="w-4 h-4 text-[#5d205c]" />
+                      <BedDouble className="w-4 h-4 text-[#5e265e]" />
                       <span>
                         {assignedCount} {assignedCount === 1 ? 'habitación asignada' : 'habitaciones asignadas'}
                       </span>
@@ -400,7 +400,7 @@ export default function CategoriesAdminPage() {
           <button
             type="button"
             onClick={openCreateModal}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5d205c] hover:bg-[#7a2b79] text-white text-xs font-bold rounded-xl shadow cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5e265e] hover:bg-[#8d398d] text-white text-xs font-bold rounded-xl shadow cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Crear Categoría</span>
@@ -413,7 +413,7 @@ export default function CategoriesAdminPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs">
           <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-slate-200 animate-fadeIn">
             <h4 className="text-lg font-bold font-serif text-slate-900 mb-1 flex items-center gap-2">
-              <Tag className="w-5 h-5 text-[#5d205c]" />
+              <Tag className="w-5 h-5 text-[#5e265e]" />
               <span>{modalState.isEditing ? 'Editar Categoría' : 'Nueva Categoría'}</span>
             </h4>
             <p className="text-xs text-slate-500 mb-5">
@@ -433,7 +433,7 @@ export default function CategoriesAdminPage() {
                   placeholder="Ej: Suite Presidencial"
                   value={formState.name}
                   onChange={handleNameChange}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-[#5d205c] focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-[#5e265e] focus:outline-none"
                 />
               </div>
 
@@ -448,7 +448,7 @@ export default function CategoriesAdminPage() {
                   placeholder="suite-presidencial"
                   value={formState.id}
                   onChange={(e) => setFormState({ ...formState, id: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-mono bg-slate-50 disabled:opacity-60 focus:ring-2 focus:ring-[#5d205c] focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-mono bg-slate-50 disabled:opacity-60 focus:ring-2 focus:ring-[#5e265e] focus:outline-none"
                 />
               </div>
 
@@ -461,7 +461,7 @@ export default function CategoriesAdminPage() {
                   placeholder="Breve descripción de las características de esta categoría..."
                   value={formState.description}
                   onChange={(e) => setFormState({ ...formState, description: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5d205c] focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-[#5e265e] focus:outline-none"
                 />
               </div>
 
@@ -474,7 +474,7 @@ export default function CategoriesAdminPage() {
                     onChange={(e) => setFormState({ ...formState, isActive: e.target.checked })}
                     className="sr-only peer"
                   />
-                  <div className="w-10 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#5d205c]"></div>
+                  <div className="w-10 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#5e265e]"></div>
                 </label>
               </div>
 
@@ -489,7 +489,7 @@ export default function CategoriesAdminPage() {
                 <button
                   type="submit"
                   disabled={isSaving}
-                  className="px-5 py-2 text-xs font-bold text-white bg-[#5d205c] hover:bg-[#7a2b79] rounded-xl shadow transition-colors cursor-pointer disabled:opacity-50"
+                  className="px-5 py-2 text-xs font-bold text-white bg-[#5e265e] hover:bg-[#8d398d] rounded-xl shadow transition-colors cursor-pointer disabled:opacity-50"
                 >
                   {isSaving ? 'Guardando...' : 'Guardar Categoría'}
                 </button>
@@ -523,7 +523,7 @@ export default function CategoriesAdminPage() {
                 </span>
                 {blockedModal.associatedRooms.map(r => (
                   <div key={r.id} className="text-xs font-medium text-slate-700 flex items-center gap-2">
-                    <BedDouble className="w-3.5 h-3.5 text-[#3D1347] flex-shrink-0" />
+                    <BedDouble className="w-3.5 h-3.5 text-[#4d1a4d] flex-shrink-0" />
                     <span className="truncate">{r.name}</span>
                   </div>
                 ))}

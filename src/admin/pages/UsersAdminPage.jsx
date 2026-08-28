@@ -247,8 +247,8 @@ export default function UsersAdminPage() {
     switch (role) {
       case 'admin':
         return (
-          <span className="inline-flex items-center gap-1 bg-[#5d205c]/10 text-[#5d205c] border border-purple-300/40 px-2.5 py-0.5 rounded-full text-xs font-bold">
-            <Shield className="w-3 h-3 text-[#5d205c]" />
+          <span className="inline-flex items-center gap-1 bg-[#5e265e]/10 text-[#5e265e] border border-purple-300/40 px-2.5 py-0.5 rounded-full text-xs font-bold">
+            <Shield className="w-3 h-3 text-[#5e265e]" />
             Administrador
           </span>
         );
@@ -305,7 +305,7 @@ export default function UsersAdminPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2.5 mb-1">
-            <div className="p-2 bg-[#5d205c] text-white rounded-xl">
+            <div className="p-2 bg-[#5e265e] text-white rounded-xl">
               <Users className="w-5 h-5" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 tracking-tight">
@@ -323,7 +323,7 @@ export default function UsersAdminPage() {
             onClick={() => setIsSelfPasswordModalOpen(true)}
             className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl font-semibold text-xs border border-slate-200 shadow-xs transition-all cursor-pointer"
           >
-            <Key className="w-4 h-4 text-[#5d205c]" />
+            <Key className="w-4 h-4 text-[#5e265e]" />
             <span>Cambiar Mi Contraseña</span>
           </button>
 
@@ -331,7 +331,7 @@ export default function UsersAdminPage() {
           {isAdmin && (
             <button
               onClick={handleOpenCreateModal}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-purple-950/20 border border-purple-400/30 transition-all cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-purple-950/20 border border-purple-400/30 transition-all cursor-pointer"
             >
               <UserPlus className="w-4 h-4 text-white" />
               <span>Crear Nuevo Usuario</span>
@@ -342,8 +342,8 @@ export default function UsersAdminPage() {
 
       {/* AVISO DE PERMISOS SI NO ES ADMIN */}
       {!isAdmin && (
-        <div className="p-4 bg-purple-50/70 border border-purple-200/80 rounded-2xl flex items-center gap-3 text-xs text-[#5d205c]">
-          <Info className="w-4 h-4 text-[#5d205c] flex-shrink-0" />
+        <div className="p-4 bg-purple-50/70 border border-purple-200/80 rounded-2xl flex items-center gap-3 text-xs text-[#5e265e]">
+          <Info className="w-4 h-4 text-[#5e265e] flex-shrink-0" />
           <span>
             <strong>Modo Consulta:</strong> Tu rol actual ({currentUser?.role || 'operador'}) te permite visualizar la lista. Solo los <strong>Administradores</strong> pueden registrar, editar o eliminar usuarios. Puedes cambiar tu propia clave con el botón superior.
           </span>
@@ -359,7 +359,7 @@ export default function UsersAdminPage() {
             placeholder="Buscar por usuario o nombre..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-white rounded-2xl border border-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 shadow-xs"
+            className="w-full pl-10 pr-4 py-2.5 bg-white rounded-2xl border border-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]/20 shadow-xs"
           />
         </div>
 
@@ -368,7 +368,7 @@ export default function UsersAdminPage() {
           <select
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
-            className="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#3D1347]/20 shadow-xs"
+            className="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#4d1a4d]/20 shadow-xs"
           >
             <option value="all">Todos los Roles ({users.length})</option>
             <option value="admin">Administradores</option>
@@ -382,7 +382,7 @@ export default function UsersAdminPage() {
       <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
         {loading ? (
           <div className="py-20 text-center text-slate-400 text-sm">
-            <div className="w-8 h-8 border-3 border-[#3D1347] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+            <div className="w-8 h-8 border-3 border-[#4d1a4d] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
             <span>Cargando usuarios del sistema...</span>
           </div>
         ) : filteredUsers.length === 0 ? (
@@ -412,14 +412,14 @@ export default function UsersAdminPage() {
                     <tr key={u.id} className="hover:bg-slate-50/80 transition-colors">
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5d205c] to-[#7a2b79] text-white flex items-center justify-center font-bold text-sm shadow-sm border border-purple-300/40">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5e265e] to-[#8d398d] text-white flex items-center justify-center font-bold text-sm shadow-sm border border-purple-300/40">
                             {(u.name || u.username || 'U').charAt(0).toUpperCase()}
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
                               <span className="font-bold text-slate-900 text-sm">{u.username}</span>
                               {isCurrent && (
-                                <span className="bg-[#5d205c]/20 text-[#5d205c] border border-purple-300/50 text-[10px] font-extrabold px-1.5 py-0.5 rounded">
+                                <span className="bg-[#5e265e]/20 text-[#5e265e] border border-purple-300/50 text-[10px] font-extrabold px-1.5 py-0.5 rounded">
                                   TÚ
                                 </span>
                               )}
@@ -484,17 +484,17 @@ export default function UsersAdminPage() {
                             <button
                               onClick={() => handleOpenAdminResetModal(u)}
                               title={`Restablecer contraseña de ${u.username}`}
-                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5e265e] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
-                              <Key className="w-4 h-4 text-[#5d205c]" />
+                              <Key className="w-4 h-4 text-[#5e265e]" />
                             </button>
                           ) : isCurrent ? (
                             <button
                               onClick={() => setIsSelfPasswordModalOpen(true)}
                               title="Cambiar mi contraseña"
-                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5e265e] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
-                              <Key className="w-4 h-4 text-[#5d205c]" />
+                              <Key className="w-4 h-4 text-[#5e265e]" />
                             </button>
                           ) : null}
 
@@ -503,7 +503,7 @@ export default function UsersAdminPage() {
                             <button
                               onClick={() => handleOpenEditModal(u)}
                               title="Editar usuario"
-                              className="p-2 text-slate-500 hover:text-[#5d205c] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
+                              className="p-2 text-slate-500 hover:text-[#5e265e] hover:bg-purple-50 rounded-xl transition-colors cursor-pointer"
                             >
                               <Edit2 className="w-4 h-4" />
                             </button>
@@ -545,9 +545,9 @@ export default function UsersAdminPage() {
         <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
           <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden animate-scaleUp">
             
-            <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
+            <div className="p-6 bg-gradient-to-r from-[#4d1a4d] to-[#381238] text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#5e265e]/40 border border-purple-400/40 flex items-center justify-center">
                   <UserPlus className="w-5 h-5 text-purple-200" />
                 </div>
                 <div>
@@ -588,7 +588,7 @@ export default function UsersAdminPage() {
                   onChange={(e) => setFormData({ ...formData, username: e.target.value.replace(/\s+/g, '') })}
                   placeholder="ej: recepcion_luxsur"
                   required
-                  className={`w-full px-4 py-2.5 rounded-xl border text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 ${
+                  className={`w-full px-4 py-2.5 rounded-xl border text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 ${
                     selectedUser ? 'bg-slate-100 text-slate-500 border-slate-200 cursor-not-allowed' : 'bg-white border-slate-300'
                   }`}
                 />
@@ -610,7 +610,7 @@ export default function UsersAdminPage() {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="ej: María González (Recepción Turno Mañana)"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
                 />
               </div>
 
@@ -627,7 +627,7 @@ export default function UsersAdminPage() {
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                       placeholder="Mínimo 6 caracteres"
                       required
-                      className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                      className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
                     />
                     <button
                       type="button"
@@ -648,7 +648,7 @@ export default function UsersAdminPage() {
                 <select
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
                 >
                   <option value="admin">Administrador (Acceso total)</option>
                   <option value="recepcion">Recepción (Acceso a reservas e info)</option>
@@ -669,7 +669,7 @@ export default function UsersAdminPage() {
                     onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5d205c]"></div>
+                  <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#5e265e]"></div>
                 </label>
               </div>
 
@@ -685,7 +685,7 @@ export default function UsersAdminPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? 'Guardando...' : selectedUser ? 'Guardar Cambios' : 'Crear Usuario'}
                 </button>
@@ -701,9 +701,9 @@ export default function UsersAdminPage() {
         <div className="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
           <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-md overflow-hidden animate-scaleUp">
             
-            <div className="p-6 bg-gradient-to-r from-[#3D1347] to-[#2A0B33] text-white flex items-center justify-between">
+            <div className="p-6 bg-gradient-to-r from-[#4d1a4d] to-[#381238] text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#5d205c]/40 border border-purple-400/40 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#5e265e]/40 border border-purple-400/40 flex items-center justify-center">
                   <Key className="w-5 h-5 text-purple-200" />
                 </div>
                 <div>
@@ -742,7 +742,7 @@ export default function UsersAdminPage() {
                     onChange={(e) => setAdminResetFormData({ ...adminResetFormData, newPassword: e.target.value })}
                     placeholder="Mínimo 6 caracteres"
                     required
-                    className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                    className="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
                   />
                   <button
                     type="button"
@@ -764,12 +764,12 @@ export default function UsersAdminPage() {
                   onChange={(e) => setAdminResetFormData({ ...adminResetFormData, confirmNewPassword: e.target.value })}
                   placeholder="Repite la nueva contraseña"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5d205c]/20 bg-white"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#5e265e]/20 bg-white"
                 />
               </div>
 
-              <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5d205c] flex items-start gap-2">
-                <Lock className="w-4 h-4 text-[#5d205c] shrink-0 mt-0.5" />
+              <div className="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-[#5e265e] flex items-start gap-2">
+                <Lock className="w-4 h-4 text-[#5e265e] shrink-0 mt-0.5" />
                 <span>
                   Como administrador, puedes asignar una nueva contraseña directa. Será encriptada de forma segura antes de persistir.
                 </span>
@@ -786,7 +786,7 @@ export default function UsersAdminPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#5d205c] to-[#7a2b79] hover:from-[#7a2b79] hover:to-[#5d205c] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#5e265e] to-[#8d398d] hover:from-[#8d398d] hover:to-[#5e265e] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? 'Guardando...' : 'Asignar Contraseña'}
                 </button>
